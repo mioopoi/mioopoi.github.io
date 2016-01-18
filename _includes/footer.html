@@ -1,0 +1,52 @@
+<footer class="footer text-center">
+  <p>&copy; 2015-{{ site.time | date: '%Y' }} <a href="/" target="_blank" title="{{ site.description }}">{{ site.author.name }}CC BY-NC-SA 3.0. <a href="https://github.com/javachen/javachen-blog-theme" target="_blank" title="https://github.com/javjavachen-blog-theme">Theme</a> build with <a href="//jekyllrb.com/" target="_blank" title="Transform your plain text into swebsites and blogs.">Jekyll</a>.
+  {% include analytics.html %}
+  </p>
+  <div id="toTop" style="display: block;">  <a href="#">▲</a><a href="#footer">▼</a>  </div>
+</footer>
+
+<script type="text/javascript" src="{{ ASSET_PATH }}/assets/js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="{{ ASSET_PATH }}/assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="{{ ASSET_PATH }}/assets/js/core.js"></script>
+
+<script type="text/javascript" src="{{ ASSET_PATH }}/assets/js/toc.js"></script>
+
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#toc').toc({ listType: 'ul', showSpeed: 0, showEffect: 'slideDown' });
+});
+</script>
+
+
+{% if site.comments.duoshuo.name %}
+  <!-- 多说公共JS代码 -->
+    <script type="text/javascript">
+      var duoshuoQuery = {short_name:"{{ site.comments.duoshuo.name }}"};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] ||
+        document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+  <!-- 多说公共JS代码 -->
+{% else %}
+  {% if site.comments.disqus.name %}
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = "{{site.comments.disqus.name}}"; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  {% endif %}
+{% endif %}
