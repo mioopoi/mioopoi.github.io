@@ -141,7 +141,7 @@ This is a "quote"
 
 #### Latex
 
-use mathjax for $\LaTex$.
+use mathjax for $\LaTeX$.
 
 a inline $E=MC^2$ sentence.
 

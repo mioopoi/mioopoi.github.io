@@ -1,4 +1,4 @@
-Sen's Blog
+My Personal Blog
 ======
 
 > 该博客使用 jekyll+bootstrap-3+Markdown 搭建。
@@ -12,36 +12,4 @@ Sen's Blog
 
 ## Thanks To
 
-主题从 <https://github.com/javachen/javachen-blog-theme> 修改而来，感谢原作者！[http:/blog.javachen.com](http://blog.javachen.com)。
-
-## 改进的地方
-主要改进以下地方：
-
-* 修改部分css
-* 加入[TOC](https://github.com/ghiculescu/jekyll-table-of-contents)（table of content）功能
-* 加入对[mathjax](https://www.mathjax.org/)的支持
-* 加入知乎图标
-* 加入对[Disqus](https://disqus.com/)的支持，Disqus和多说二选一，默认为多说。
-
-## 使用方法
-### 创建博文
-在此文件夹内输入如下命令行：
-
-```bash
- rake post title = "you blog title"
-```
-
-### 网页预览
-在次文件夹内输入如下命令行：
-
-```bash
- rake preview
-```
-
-或者：
-
-```bash
- jekyll build -w
-```
-
-然后用浏览器打开 [127.0.0.1:4000](127.0.0.1:4000)
+主题从 <https://github.com/SenZhangAI/senzhangai.github.com> 修改而来，感谢原作者！[https://github.com/SenZhangAI/senzhangai.github.com](https://github.com/SenZhangAI/senzhangai.github.com)。
