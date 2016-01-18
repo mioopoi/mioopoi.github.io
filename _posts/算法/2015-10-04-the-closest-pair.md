@@ -9,9 +9,6 @@ description:
 use_math: true
 ---
 
-* content
-{:toc}
-
 ## 描述
 给了平面上若干个点的坐标，求最近的两个点之间的距离。
 
