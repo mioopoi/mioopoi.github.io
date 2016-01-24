@@ -156,6 +156,7 @@ void preorderTraversal(TreeNode *root) {
 p.s. 以上思路其实就是模拟递归的过程。
 
 代码:
+
 ```c++
 void inorderTraversal(TreeNode *root) {
     // non-recursion version
