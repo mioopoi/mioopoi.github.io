@@ -86,7 +86,7 @@ void preorderTraversal(TreeNode *root) {
     TreeNode *curt = root;
 
     if (root == NULL) {
-        return rst;
+        return;
     }
 
     while (curt != NULL || !stacknode.empty()) {
@@ -111,7 +111,7 @@ void preorderTraversal(TreeNode *root) {
     TreeNode *tmp;
 
     if (root == NULL) {
-        return rst;
+        return;
     }
 
     stacknode.push(root);
