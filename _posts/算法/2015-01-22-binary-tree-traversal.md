@@ -7,6 +7,8 @@ tags: [分治,Divide & Conquer,二叉树]
 summary:
 ---
 
+作者: <a href="http://mioopoi.github.io/about.html",target="_blank">Takashi</a>
+
 二叉树三种遍历方法的递归实现很简单，但是有必要掌握非递归实现，因为非递归实现不会有栈溢出的问题，通常效率也更高一些。
 
 二叉树的数据结构说明: (如未说明，后面贴出的代码均是C++代码)

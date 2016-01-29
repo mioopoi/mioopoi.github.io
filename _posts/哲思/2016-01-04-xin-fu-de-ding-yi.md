@@ -9,6 +9,8 @@ description:
 use_math: false
 ---
 
+作者: <a href="http://mioopoi.github.io/about.html",target="_blank">Takashi</a>
+
 小时候，
 幸福是一元硬币，虽然少，但是总感觉能买到很多好吃的东西；
 是奶奶泡的糖水，甜甜的，好像喝不完；

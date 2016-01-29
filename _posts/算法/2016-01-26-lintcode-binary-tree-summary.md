@@ -7,8 +7,9 @@ tags: [二叉树]
 summary:
 ---
 
-## LintCode 66: Binary Tree Preorder Traversal (二叉树的前序遍历)
+作者: <a href="http://mioopoi.github.io/about.html",target="_blank">Takashi</a>
 
+## LintCode 66: Binary Tree Preorder Traversal (二叉树的前序遍历)
 题目链接: <a href="http://www.lintcode.com/zh-cn/problem/binary-tree-preorder-traversal/", target="_blank"> http://www.lintcode.com/zh-cn/problem/binary-tree-preorder-traversal/ </a>
 
 递归写法：
@@ -161,7 +162,6 @@ public:
 ```
 
 ## LintCode 93: Balanced Binary Tree (平衡二叉树)
-
 题目链接: <a href="http://www.lintcode.com/zh-cn/problem/balanced-binary-tree/" target="_blank">http://www.lintcode.com/zh-cn/problem/balanced-binary-tree/</a>
 
 思路1：
@@ -319,13 +319,13 @@ public:
 ```cpp
 class Solution {
 public:
-	int rst;
+    int rst;
     /**
      * @param root: The root of binary tree.
      * @return: An integer
      */
     int maxPathSum(TreeNode *root) {
-	    rst = 0x80000000;
+        rst = 0x80000000;
         helper(root);
         return rst;
     }
@@ -350,7 +350,6 @@ private:
 ```
 
 ## LintCode 69: Binary Tree Level Order Traversal (二叉树的层次遍历)
-
 题目链接: <a href="http://www.lintcode.com/zh-cn/problem/binary-tree-level-order-traversal/", target="_blank">http://www.lintcode.com/zh-cn/problem/binary-tree-level-order-traversal/</a>
 
 思路：
@@ -507,35 +506,35 @@ public:
         bool flag = true;
 
         if (root == NULL) {
-        	return rst;
+            return rst;
         }
         myqueue.push_back(root);
         while (!myqueue.empty()) {
-        	cnt = myqueue.size();
-        	for (int i = 0; i < cnt; ++i) {
-        	    if (flag == true) {
-        	        next_level.push_back(myqueue.back()->val);
-        	        if (myqueue.back()->left != NULL) {
-        	            myqueue.push_front(myqueue.back()->left);
-        	        }
-        	        if (myqueue.back()->right != NULL) {
-        	            myqueue.push_front(myqueue.back()->right);
-        	        }
-        	        myqueue.pop_back();
-        	    } else {
-        	        next_level.push_back(myqueue.front()->val);
-        	        if (myqueue.front()->right != NULL) {
-        	            myqueue.push_back(myqueue.front()->right);
-        	        }
-        	        if (myqueue.front()->left != NULL) {
-        	            myqueue.push_back(myqueue.front()->left);
-        	        }
-        	        myqueue.pop_front();
-        	    }
-        	}
-        	rst.push_back(next_level);
-    	    flag = !flag;
-    	    next_level.clear();
+            cnt = myqueue.size();
+            for (int i = 0; i < cnt; ++i) {
+                if (flag == true) {
+                    next_level.push_back(myqueue.back()->val);
+                    if (myqueue.back()->left != NULL) {
+                        myqueue.push_front(myqueue.back()->left);
+                    }
+                    if (myqueue.back()->right != NULL) {
+                        myqueue.push_front(myqueue.back()->right);
+                    }
+                    myqueue.pop_back();
+                } else {
+                    next_level.push_back(myqueue.front()->val);
+                    if (myqueue.front()->right != NULL) {
+                        myqueue.push_back(myqueue.front()->right);
+                    }
+                    if (myqueue.front()->left != NULL) {
+                        myqueue.push_back(myqueue.front()->left);
+                    }
+                    myqueue.pop_front();
+                }
+            }
+            rst.push_back(next_level);
+            flag = !flag;
+            next_level.clear();
         }
 
         return rst;
@@ -606,6 +605,93 @@ private:
 
 另外，关于这道题，这里给出了多种解法供参考：<a href="http://www.cnblogs.com/yuzhangcmu/p/4177047.html", target="_blank">http://www.cnblogs.com/yuzhangcmu/p/4177047.html </a>
 
+## LintCode 448: Inorder Successor in Binary Search Tree
+
+**问题**
+Given a binary search tree (<a href="http://www.lintcode.com/problem/validate-binary-search-tree/" title="BST">See Definition</a>) and a node in it, find the in-order successor of that node in the BST.
+
+<b>样例</b>
+<div class="m-t-sm"><p>Given tree = <code>[2,1]</code> and node = <code>1</code>:</p>
+<pre><code>  
+  2
+ /
+1
+</code></pre>
+<p>return node <code>2</code>.</p>
+<p>Given tree = <code>[2,1,3]</code> and node = <code>2</code>:</p>
+<pre><code>  
+  2
+ / \
+1   3
+</code></pre>
+<p>return node <code>3</code>.</p></div>
+    
+<b>注意</b>
+<div class="m-t-sm"><p>If the given node has no in-order successor in the tree, return <code>null</code>.</p></div>
+
+**思路**
+1. 用DFS找p， O(h)。DFS的同时用一个变量`lastVisited`记录可能的inorder successor，初始化为`NULL`，更新这个变量的规则是：如果往左子树DFS就更新它，否则不更新。因为如果往左子树找，中序遍历的下一个节点就是`lastVisited`；
+2. 如果找不到p，返回`NULL`；
+3. 如果找到了p，先判断它是否有右子树，如果有，就返回右子树的最小值(依然用DFS求, O(h))；否则返回`lastVisited`。
+
+```cpp
+class Solution {
+public:
+    TreeNode *lastVisited;
+    TreeNode* inorderSuccessor(TreeNode* root, TreeNode* p) {
+        /*  idea:
+            1. find p, O(h)
+            2. if p->right is not NULL, calculate the minimum value in the right subtree of p, O(h)
+               else return the last visited node(inorder parent)
+        */
+        if (root == NULL) {
+            return NULL;
+        }
+
+        if (findTarget(root, p)) {
+            if (p->right != NULL) {
+                return dfsMin(p->right);
+            } else {
+                return lastVisited;
+            }
+        } else {
+            return NULL;
+        }
+    }
+
+private:
+    bool findTarget(TreeNode* root, TreeNode* p) {
+        if (root == NULL) {
+            return false;
+        }
+
+        lastVisited = NULL;
+        while (root != NULL) {
+            if (root == p) {
+                return true;
+            }
+            if (root->val < p->val) {
+                root = root->right;
+            } else {
+                lastVisited = root;
+                root = root->left;
+            }
+        }
+        return false;
+    }
+
+    TreeNode* dfsMin(TreeNode* root) {
+        if (root == NULL) {
+            return NULL;
+        }
+        while (root->left != NULL) {
+            root = root->left;
+        }
+        return root;
+    }
+};
+```
+
 ## LintCode 86: Binary Search Tree Iterator (二叉查找树迭代器)
 
 题目链接: <a href="http://www.lintcode.com/zh-cn/problem/binary-search-tree-iterator/", target="_blank"> http://www.lintcode.com/zh-cn/problem/binary-search-tree-iterator/ </a>
@@ -664,4 +750,261 @@ public:
 1. 构造函数的初始化：清栈
 2. `next()`函数用中序遍历写
 
+## LintCode 11: Search Range in Binary Search Tree (二叉查找树中搜索区间)
+
+题目链接: <a href="http://www.lintcode.com/zh-cn/problem/search-range-in-binary-search-tree/">http://www.lintcode.com/zh-cn/problem/search-range-in-binary-search-tree/ </a>
+
+思路：中序遍历加一个判断即可。中序遍历的非递归写法要烂熟于心！
+
+```cpp
+class Solution {
+public:
+    /**
+     * @param root: The root of the binary search tree.
+     * @param k1 and k2: range k1 to k2.
+     * @return: Return all keys that k1<=key<=k2 in ascending order.
+     */
+    vector<int> searchRange(TreeNode* root, int k1, int k2) {
+        vector<int> rst;
+        if (root == NULL) {
+            return rst;
+        }
+
+        stack<TreeNode*> mystack;
+        TreeNode *current = root;
+        while (current != NULL || !mystack.empty()) {
+            while (current != NULL) {
+                mystack.push(current);
+                current = current->left;
+            }
+            current = mystack.top(); mystack.pop();
+            if (current->val >= k1 && current->val <= k2) {
+                rst.push_back(current->val);
+            }
+            if (current->val > k2) {
+                return rst;
+            }
+            current = current->right;
+        }
+
+        return rst;
+    }
+};
+```
+
+## LintCode 85: Insert Node in a Binary Search Tree (在二叉查找树中插入节点)
+
+题目链接: <a href="http://www.lintcode.com/zh-cn/problem/insert-node-in-a-binary-search-tree/",target="_blank">http://www.lintcode.com/zh-cn/problem/insert-node-in-a-binary-search-tree/ </a>
+
+思路1：中序遍历（不推荐）
+1. 中序遍历，用一个变量`lastVisited`记录上一次访问的节点(初始化为`null`)
+2. 如果能找到第一个大于node的节点。如果这个节点是根节点，则将node插入其左边，返回；否则判断`lastVisited`是不是叶子节点，是的话就插入其右边，不是就插入当前节点的左边，返回；
+3. 如果找不到一个大于node的节点，则将node插入`lastVisited`的右边，返回。
+
+```cpp
+class Solution {
+public:
+    /**
+     * @param root: The root of the binary search tree.
+     * @param node: insert this node into the binary search tree
+     * @return: The root of the new binary search tree.
+     */
+    TreeNode* insertNode(TreeNode* root, TreeNode* node) {
+        if (root == NULL) {
+            return node;
+        }
+        // inorder traversal, to find the first node with a larger value
+        stack<TreeNode*> mystack;
+        TreeNode *current = root, *lastVisited = NULL;
+        while (current != NULL || !mystack.empty()) {
+            while (current != NULL) {
+                mystack.push(current);
+                current = current->left;
+            }
+            current = mystack.top(); mystack.pop();
+            if (current->val > node->val) {
+                if (lastVisited == NULL) {
+                    current->left = node;
+                    return root;    // 因为这句没加，debug了好久==
+                }
+                if (lastVisited->right == NULL) {
+                    lastVisited->right = node;
+                } else {
+                    current->left = node;
+                }
+                return root;
+            }
+            lastVisited = current;
+            current = current->right;
+        }
+        // if not find
+        if (lastVisited != NULL) {
+            lastVisited->right = node;
+        }
+
+        return root;
+    }
+};
+```
+
+思路2：
+递归，代码很简洁。
+
+```cpp
+class Solution {
+public:
+    /**
+     * @param root: The root of the binary search tree.
+     * @param node: insert this node into the binary search tree
+     * @return: The root of the new binary search tree.
+     */
+    TreeNode* insertNode(TreeNode* root, TreeNode* node) {
+        if (root == NULL) {
+            root = node;
+            return root;
+        }
+        if (root->val < node->val) {
+            root->right = insertNode(root->right, node);
+        }
+        if (root->val > node->val) {
+            root->left = insertNode(root->left, node);
+        }
+        return root;
+    }
+};
+```
+
+思路3：
+非递归，首先要明确一个事实：**节点一定是被插在二叉搜索树的叶子节点后的**，知道了这个事实，就好办了。DFS时每次将当前节点的值与node的值作比较，如果比node小就往右走，否则往左走，直到叶子节点。为了方便最后的插入操作，需要用一个变量记录上一次访问的节点。
+
+```cpp
+class Solution {
+public:
+    /**
+     * @param root: The root of the binary search tree.
+     * @param node: insert this node into the binary search tree
+     * @return: The root of the new binary search tree.
+     */
+    TreeNode* insertNode(TreeNode* root, TreeNode* node) {
+        if (root == NULL) {
+            root = node;
+            return root;
+        }
+        TreeNode *curt = root, *lastVis = NULL;
+        while (curt != NULL) {
+            lastVis = curt;
+            if (curt->val < node->val) {
+                curt = curt->right;
+            } else {
+                curt = curt->left;
+            }
+        }
+        if (lastVis->val < node->val) {
+            lastVis->right = node;
+        } else {
+            lastVis->left = node;
+        }
+        return root;
+    }
+};
+```
+
+## LintCode 87: Remove Node in Binary Search Tree (删除二叉查找树的节点)
+
+题目链接: <a href="http://www.lintcode.com/zh-cn/problem/remove-node-in-binary-search-tree/", target="_blank">http://www.lintcode.com/zh-cn/problem/remove-node-in-binary-search-tree/ </a>
+
+这题好难 == 虽然思路并不难想，但是实现起来确实很困难！尤其是对指针的操作。想了很久，晚上没写出来，一晚上都心神不宁，第二天也早早就醒了~
+
+思路：
+1. 找到目标节点和它的父节点。用递归做，复杂度O(h)，h是BST的高。这里有个小技巧，用一个dummy node指向根节点，比如`dummy->left = root`，最后返回`dummy->left`就行了，这是因为被删除的目标节点可能就是根节点。
+2. 删除目标节点。这一步比较难。《算法导论》上有关于该问题的讨论，常用的思路是分三种情况讨论：目标节点没有孩子、目标节点有一个孩子，以及目标节点有两个孩子。第一种情况最好处理，只要将目标节点设为空就好了，`target = NULL`；第二种情况就将目标节点父节点指向目标节点的孩子；第三种情况最复杂，下面详细讨论。虽然这个思路很清晰，但是实现起来你会发现代码比较长，不简洁。其实只要分**目标节点有无右子树两种情况来讨论就能处理了**，详细分析如下：
+**2.1** 目标节点无右子树。只要将目标节点的父节点指向目标节点的左子树就好。（少了很多判断，比上面的第二种情况简洁多了）但是如果目标节点也没有左子树怎么办呀？这就变成上面的第一种情况了，目标节点的父节点指向的是一个空指针，依然可以；
+**2.2** 目标节点有右子树。（即上面的第三种情况的处理方法，请结合下面的图解）首先DFS找到目标节点右子树的最小值，它在右子树的最左下角；然后删掉这个点，注意这个点不可能有左子树（否则它一定不是最小的），但是可能有右子树，所以直接将这个点的父节点指向该点的右子树就好，这里要用到父节点，前一步DFS时用一个变量保存即可；最后将目标节点的值修改为前一步被删掉节点的值。注意这里并没有删掉目标节点，而是替换值。因为将值替换为了它右子树的最小值，而第二步就将有最小值的节点删掉了，所以保证了新得到的树依然是BST。
+
+不难得到复杂度是O(h)
+
+2.2的图解：
+![remove-bst-1](http://www.algolist.net/img/bst-remove-case-3-3.png) 目标节点值为12
+
+![remove-bst-2](http://www.algolist.net/img/bst-remove-case-3-4.png) 找到目标节点右子树的最小值
+
+![remove-bst-3](http://www.algolist.net/img/bst-remove-case-3-5.png) 替换目标节点的值
+
+![remove-bst-4](http://www.algolist.net/img/bst-remove-case-3-6.png) 删除目标节点右子树的最小节点
+
+图片来源: <a href="http://www.algolist.net/Data_structures/Binary_search_tree/Removal", target="_blank">http://www.algolist.net/Data_structures/Binary_search_tree/Removal </a>
+
+```cpp
+class Solution {
+public:
+    /**
+     * @param root: The root of the binary search tree.
+     * @param value: Remove the node with given value.
+     * @return: The root of the binary search tree after removal.
+     */
+    TreeNode* removeNode(TreeNode* root, int value) {
+        if (root == NULL) {
+            return root;
+        }
+        
+        TreeNode *dummy = new TreeNode(0);
+        dummy->left = root;
+        
+        TreeNode *targetParent = findNode(root, value, dummy);
+        TreeNode *target;
+        if (targetParent->left != NULL && targetParent->left->val == value) {
+            target = targetParent->left;
+        } else if (targetParent->right != NULL && targetParent->right->val == value) {
+            target = targetParent->right;
+        } else {
+            return dummy->left;
+        }
+        
+        deleteNode(targetParent, target);
+        
+        return dummy->left;    // 为什么不是return root? 因为root可能会被删掉
+    }
+
+private:
+    TreeNode* findNode(TreeNode* root, int value, TreeNode* parent) {
+        // if find the node, return its parent
+        if (root == NULL) {
+            return parent;
+        }
+        if (root->val == value) {
+            return parent;
+        }
+        if (root->val < value) {
+            return findNode(root->right, value, root);
+        } else {
+            return findNode(root->left, value, root);
+        }
+    }
+    
+    void deleteNode(TreeNode* targetParent, TreeNode* target) {
+        if (target->right == NULL) {
+            if (targetParent->left == target) {
+                targetParent->left = target->left;
+            } else {
+                targetParent->right = target->left;
+            }
+        } else {
+            TreeNode *curt = target->right;
+            TreeNode *father = target;
+            while (curt->left != NULL) {
+                father = curt;
+                curt = curt->left;
+            }
+            if (father->left == curt) {
+                father->left = curt->right;
+            } else {
+                father->right = curt->right;
+            }
+            target->val = curt->val;
+        }
+    }
+};
+```
+
+参考了[这里](http://www.jiuzhang.com/solutions/remove-node-in-binary-search-tree/)，总感觉九章算法的代码写得清晰又简洁~
 
