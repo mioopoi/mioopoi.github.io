@@ -9,6 +9,11 @@ summary:
 
 作者: <a href="http://mioopoi.github.io/about.html",target="_blank">Takashi</a>
 
+# LintCode部分二叉树问题题解
+@(Lcode)[二叉树]
+
+[TOC]
+
 ## LintCode 66: Binary Tree Preorder Traversal (二叉树的前序遍历)
 题目链接: <a href="http://www.lintcode.com/zh-cn/problem/binary-tree-preorder-traversal/", target="_blank"> http://www.lintcode.com/zh-cn/problem/binary-tree-preorder-traversal/ </a>
 
@@ -137,7 +142,79 @@ public:
 
 ## LintCode 68: Binary Tree Postorder Traversal (二叉树的后序遍历)
 
-链接: 
+链接: <a href="http://www.lintcode.com/zh-cn/problem/binary-tree-postorder-traversal/", target="_blank"> http://www.lintcode.com/zh-cn/problem/binary-tree-postorder-traversal/ </a>
+
+递归写法：
+
+```cpp
+class Solution {
+    /**
+     * @param root: The root of binary tree.
+     * @return: Postorder in vector which contains node values.
+     */
+public:
+    vector<int> postorderTraversal(TreeNode *root) {
+        // recursion version
+        vector<int> rst;
+        postorder(root, rst);
+        return rst;
+    }
+private:
+    void postorder(TreeNode *root, vector<int>& rst)
+    {
+        if (root == NULL) {
+            return;
+        }
+        postorder(root->left, rst);
+        postorder(root->right, rst);
+        rst.push_back(root->val);
+    }
+};
+```
+
+相比前两种遍历方法的非递归版本，非递归的后序遍历是最困难的。因为要访问完左子树和右子树之后才能访问根节点，而要想访问左子树和右子树，就必须先到达根节点才行，这意味着，在用栈实现时，一个节点将两次出现在栈顶，只有第二次出现在栈顶时，才能出栈并访问。
+
+思路：
+用一个变量`lastVisited`标记上一次访问的节点，据此可判断一个节点的右子树是否已经被访问过。
+1. 先将根节点入栈，然后一直沿左子树进行DFS，中途将所有节点入栈，直到叶子节点；
+2. 此时不能立即弹出栈顶元素并输出其值，因为其右孩子还没有被访问；
+3. 如果栈顶元素的右孩子不为空，则按步骤1的方法处理右子树；
+否则可以弹出栈顶元素并输出其值，注意更新`lastVisited`变量（指向被弹出的栈顶节点）
+
+```cpp
+class Solution {
+    /**
+     * @param root: The root of binary tree.
+     * @return: Postorder in vector which contains node values.
+     */
+public:
+    vector<int> postorderTraversal(TreeNode *root) {
+        // non-recursion
+        vector<int> rst;
+        stack<TreeNode *> stacknode;
+
+        TreeNode *curt = root, *lastVisited = NULL;
+
+        while (curt != NULL || !stacknode.empty()) {
+            while (curt != NULL) {
+                stacknode.push(curt);
+                curt = curt->left;
+            }
+            curt = stacknode.top();
+            if (curt->right == NULL || lastVisited == curt->right) {
+                stacknode.pop();
+                rst.push_back(curt->val);
+                lastVisited = curt;
+                curt = NULL;    // 这句很关键，不能漏
+            } else {
+                curt = curt->right;
+            }
+        }
+        
+        return rst;
+    }
+};
+```
 
 ## LintCode 97: Max Depth of Binary Tree (二叉树的最大深度)
 题目链接：<a href="http://www.lintcode.com/zh-cn/problem/maximum-depth-of-binary-tree/" target="_blank"> http://www.lintcode.com/zh-cn/problem/maximum-depth-of-binary-tree/ </a>
@@ -1007,4 +1084,495 @@ private:
 ```
 
 参考了[这里](http://www.jiuzhang.com/solutions/remove-node-in-binary-search-tree/)，总感觉九章算法的代码写得清晰又简洁~
+
+## Lintcode 376: Binary Tree Path Sum (二叉树的路径和)
+
+给定一个二叉树，找出所有路径中各节点相加总和等于给定 <code>目标值</code> 的路径。一个有效的路径，指的是从根节点到叶节点的路径。
+
+<div class="m-t-lg m-b-lg">
+  <b>样例</b>
+  <div class="m-t-sm"><p>给定一个二叉树，和 <code>目标值 = 5</code>:</p>
+<pre><code>     
+     1
+    / \
+   2   4
+  / \
+ 2   3
+</code></pre>
+<p>返回：</p>
+<pre><code>
+[
+  [1, 2, 2],
+  [1, 4]
+]
+</code></pre></div>
+
+首先要理解题意。只考虑根节点到叶子节点的路径，分治法就能做。深深感觉到分治的强大~
+
+```cpp
+class Solution {
+public:
+    /**
+     * @param root the root of binary tree
+     * @param target an integer
+     * @return all valid paths
+     */
+    vector<vector<int>> binaryTreePathSum(TreeNode *root, int target) {
+        vector<vector<int> > rst;
+        if (root == NULL) {    // 当root->val > target时，也可以加入，因为节点可能为负！
+            return rst;
+        }
+        if (root->val == target) {
+            vector<int> tmp(1,root->val);
+            rst.push_back(tmp);
+            return rst;
+        }
+        // divide
+        vector<vector<int> > left = binaryTreePathSum(root->left, target - root->val);
+        vector<vector<int> > right = binaryTreePathSum(root->right, target - root->val);
+        // conquer (把root->val插入子树结果中每条路径的首部)
+        for (int i = 0; i < left.size(); ++i) {
+            left[i].insert(left[i].begin(), root->val);
+        }
+        for (int i = 0; i < right.size(); ++i) {
+            right[i].insert(right[i].begin(), root->val);
+        }
+        left.insert(left.end(), right.begin(), right.end());
+        
+        return left;
+    }
+};
+```
+
+## LintCode 469: Identical Binary Tree (等价二叉树)
+
+题目链接: <a href="http://www.lintcode.com/zh-cn/problem/identical-binary-tree/", target="_blank">http://www.lintcode.com/zh-cn/problem/identical-binary-tree/ </a>
+
+思路：分治。
+
+```cpp
+class Solution {
+public:
+    /**
+     * @aaram a, b, the root of binary trees.
+     * @return true if they are identical, or false.
+     */
+    bool isIdentical(TreeNode* a, TreeNode* b) {
+        if (a == NULL && b == NULL) {
+            return true;
+        }
+        if (a == NULL || b == NULL) {
+            return false;
+        }
+        if (a->val != b->val) {
+            return false;
+        }
+        bool cas1 = isIdentical(a->left, b->left);
+        if (!cas1) { return false; }
+        bool cas2 = isIdentical(a->right, b->right);
+        if (!cas2) { return false; }
+        return true;
+    }
+};
+```
+
+## LintCode 468: Symmetric Binary Tree (对称二叉树)
+
+Given a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).
+
+<b>样例</b>
+<div class="m-t-sm"><pre><code>
+    1
+   / \
+  2   2
+ / \ / \
+3  4 4  3
+</code></pre>
+<p>is a symmetric binary tree.</p>
+<pre><code>
+    1
+   / \
+  2   2
+   \   \
+   3    3
+</code></pre>
+<p>is not a symmetric binary tree.</p></div>
+
+思路1：
+把根节点的右子树（或者左子树）反转，然后判断左、右子树是否等价。
+
+```cpp
+class Solution {
+public:
+    /**
+     * @param root, the root of binary tree.
+     * @return true if it is a mirror of itself, or false.
+     */
+    bool isSymmetric(TreeNode* root) {
+        if (root == NULL) {
+            return true;
+        }
+        reverseTree(root->right);
+        if (isIdentical(root->left, root->right)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+private:
+    void reverseTree(TreeNode *root) {
+        if (root == NULL) {
+            return;
+        }
+        // swap left subtree and right subtree
+        TreeNode *tmp = new TreeNode(0);
+        tmp->left = root->right; tmp->right = root->left;
+        root->left = tmp->left;
+        root->right = tmp->right;
+        
+        reverseTree(root->left);
+        reverseTree(root->right);
+    }
+
+    bool isIdentical(TreeNode* a, TreeNode* b) {
+        if (a == NULL && b == NULL) {
+            return true;
+        }
+        if (a == NULL || b == NULL) {
+            return false;
+        }
+        if (a->val != b->val) {
+            return false;
+        }
+        bool cas1 = isIdentical(a->left, b->left);
+        if (!cas1) { return false; }
+        bool cas2 = isIdentical(a->right, b->right);
+        if (!cas2) { return false; }
+        return true;
+    }    
+};
+```
+
+思路2：
+将判断等价二叉树的方法稍作修改。
+
+```cpp
+class Solution {
+public:
+    /**
+     * @param root, the root of binary tree.
+     * @return true if it is a mirror of itself, or false.
+     */
+    bool isSymmetric(TreeNode* root) {
+        if (root == NULL) {
+            return true;
+        }
+        return check(root->left, root->right);
+    }
+private:
+    bool check(TreeNode* root1, TreeNode* root2) {
+        if (root1 == NULL && root2 == NULL) {
+            return true;
+        }
+        if (root1 == NULL || root2 == NULL) {
+            return false;
+        }
+        if (root1->val != root2->val) {
+            return false;
+        }
+        return check(root1->left, root2->right) && check(root1->right, root2->left);
+    }
+};
+```
+
+## LintCode 467: Complete Binary Tree (完全二叉树)
+
+判断一棵二叉树是否是**完全二叉树**。完全二叉树，就是节点按层从左到右添加，只有一个节点有了左孩子，才能添加右孩子；只有上一层填满，才能填下一层。满二叉树则是除了叶子节点，所有的节点都有左孩子和右孩子。
+
+思路：
+1. 首先判断左、右子树是不是完全二叉树，有一个不是的话，就返回`false`；
+2. 如果左、右子树都是完全二叉树，则还要比较它们的高度。
+如果左子树的高度小于右子树，返回`false`；
+如果左子树的高度等于右子树，再判断左子树是不是满二叉树，如果不是，返回`false`；
+如果左子树高度比右子树高度大2（或以上），返回`false`；
+如果左子树高度恰好比右子树高度大1，再判断右子树是不是满二叉树，如果不是，返回`false`；
+若都通过了上面的检测，返回`true`。
+
+```cpp
+class Solution {
+public:
+    /**
+     * @param root, the root of binary tree.
+     * @return true if it is a complete binary tree, or false.
+     */
+    bool isComplete(TreeNode* root) {
+        if (root == NULL) {
+            return true;
+        }
+        bool left = isComplete(root->left);
+        if (!left) { return false; }
+        bool right = isComplete(root->right);
+        if (!right) { return false; }
+        int lefth = maxDepth(root->left);
+        int righth = maxDepth(root->right);
+        if (lefth < righth) {
+            return false;
+        }
+        if (lefth == righth && !isFull(root->left)) {
+            return false;
+        }
+        if (lefth - righth > 1) {
+            return false;
+        }
+        if (lefth - righth == 1 && !isFull(root->right)) {
+            return false;
+        }
+
+        return true;
+    }
+    
+    int maxDepth(TreeNode* root) {
+        if (root == NULL) {
+            return 0;
+        }
+        int left = maxDepth(root->left);
+        int right = maxDepth(root->right);
+        return 1 + max(left, right);
+    }
+    
+    bool isFull(TreeNode *root) {
+        if (root == NULL) {
+            return true;
+        }
+        if (root->left == NULL && root->right == NULL) {
+            return true;
+        }
+        if (root->left == NULL || root->right == NULL) {
+            return false;
+        }
+        if (!isFull(root->left)) {
+            return false;
+        }
+        if (!isFull(root->right)) {
+            return false;
+        }
+        return true;
+    }
+};
+```
+
+## LintCode 155: Minimum Depth of Binary Tree (二叉树的最小深度)
+
+题目链接: <a href="http://www.lintcode.com/en/problem/minimum-depth-of-binary-tree/", target="_blank">http://www.lintcode.com/en/problem/minimum-depth-of-binary-tree/ </a>
+
+首先要弄清“最小深度”以及“叶子节点”的概念。这题不难，但是容易错。
+
+```cpp
+class Solution {
+public:
+    /**
+     * @param root: The root of binary tree.
+     * @return: An integer
+     */
+    int minDepth(TreeNode *root) {
+        if (root == NULL) {
+            return 0;
+        }
+        if (root->left == NULL) {
+            return 1 + minDepth(root->right);
+        }
+        if (root->right == NULL) {
+            return 1 + minDepth(root->left);
+        }
+        return 1 + min(minDepth(root->left), minDepth(root->right));
+    }
+};
+```
+
+## LintCode 73: Construct Binary Tree from Preorder and Inorder Traversal (前序遍历和中序遍历构造二叉树)
+
+题目链接: <a href="http://www.lintcode.com/zh-cn/problem/construct-binary-tree-from-preorder-and-inorder-traversal/", target="_blank"> http://www.lintcode.com/zh-cn/problem/construct-binary-tree-from-preorder-and-inorder-traversal/ </a>
+
+很好的题。递归，分别构造左子树和右子树，然后合并。通过前序遍历和中序遍历的结果可以计算出左子树的节点个数，据此可以知道左子树的前序遍历和中序遍历；右子树同理。
+
+写递归函数时，边界要细心处理。
+
+```cpp
+class Solution {
+    /**
+     *@param preorder : A list of integers that preorder traversal of a tree
+     *@param inorder : A list of integers that inorder traversal of a tree
+     *@return : Root of a tree
+     */
+public:
+    TreeNode *buildTree(vector<int> &preorder, vector<int> &inorder) {
+        if (preorder.empty()) {
+            return NULL;
+        }
+        return helper(preorder, inorder, 0, preorder.size() - 1, 0, inorder.size() - 1);
+    }
+
+private:
+    TreeNode *helper(vector<int>& preorder, vector<int>& inorder, int ps, int pe, int is, int ie) {
+        if (ps > pe) {
+            return NULL;
+        }
+        TreeNode* root = new TreeNode(preorder[ps]);
+        int pos;
+        for (int i = is; i <= ie; ++i) {
+            if (inorder[i] == root->val) {
+                pos = i;
+                break;
+            }
+        }
+        root->left = helper(preorder, inorder, ps + 1, ps + pos - is, is, pos - 1);
+        root->right = helper(preorder, inorder, ps + pos - is + 1, pe, pos + 1, ie);
+        return root;
+    }
+};
+```
+
+## LintCode 72: Construct Binary Tree from Inorder and Postorder Traversal (中序遍历和后序遍历构造二叉树)
+
+与前面思路一样。
+
+```cpp
+class Solution {
+    /**
+     *@param inorder : A list of integers that inorder traversal of a tree
+     *@param postorder : A list of integers that postorder traversal of a tree
+     *@return : Root of a tree
+     */
+public:
+    TreeNode *buildTree(vector<int> &inorder, vector<int> &postorder) {
+        if (inorder.empty()) {
+            return NULL;
+        }
+        return helper(inorder, postorder, 0, inorder.size() - 1, 0, postorder.size() - 1);
+    }
+    
+private:
+    TreeNode *helper(vector<int> &inorder, vector<int> &postorder, int instart, int inend, int poststart, int postend) {
+        if (instart > inend) {
+            return NULL;
+        }
+        TreeNode* root = new TreeNode(postorder[postend]);
+        int pos;
+        for (int i = instart; i <= inend; ++i) {
+            if (inorder[i] == root->val) {
+                pos = i;
+                break;
+            }
+        }
+        root->left = helper(inorder, postorder, instart, pos - 1, poststart, poststart + pos - instart - 1);
+        root->right = helper(inorder, postorder, pos + 1, inend, poststart + pos - instart, postend - 1);
+        return root;
+    }
+};
+```
+
+## LintCode 7: Binary Tree Serialization (二叉树的序列化和解序列)
+
+题目链接: <a href="http://www.lintcode.com/zh-cn/problem/binary-tree-serialization/", target="_blank"> http://www.lintcode.com/zh-cn/problem/binary-tree-serialization/ </a>
+
+这题调试了好久。主要是对`string`的操作很不熟悉，代码也写得不简洁。
+
+思路（基于层序遍历，即BFS）：
+- 序列化：层序遍历即可，不同的是当节点的孩子为空时，要把它解释成特殊符号（比如`#`）再放入string；这里不一定要用队列，`vector`容器就可以。另外，用`std::to_string`将整数转为`string`类型。
+- 解序列：一边BFS，一边建二叉树。我用了两个整型变量`posStart`和`posEnd`来记录真正有意义的子序列（即字符`,`之间的部分）的左、右边界，用STL中的`string::substr`函数提取这两个边界之间的子串，用`std::stoi`将`string`类型转为`int`型。
+
+注意：`std::to_string`和`std::stoi`都是C++11版本及以上提供的库函数。
+
+```cpp
+class Solution {
+public:
+    /**
+     * This method will be invoked first, you should design your own algorithm
+     * to serialize a binary tree which denote by a root node to a string which
+     * can be easily deserialized by your own "deserialize" method later.
+     */
+    string serialize(TreeNode *root) {
+        string binaryTree;
+        if (root == NULL) {
+            return binaryTree;
+        }
+        
+        vector<TreeNode*> myqueue;
+        myqueue.push_back(root);
+        
+        for (int i = 0; i < myqueue.size(); ++i) {
+            TreeNode *node = myqueue[i];
+            if (node == NULL) {
+                continue;
+            }
+            myqueue.push_back(node->left);
+            myqueue.push_back(node->right);
+        }
+        
+        //while (myqueue[myqueue.size() - 1] == NULL) {
+        //    myqueue.pop_back();
+        //}
+        
+        for (int i = 0; i < myqueue.size(); ++i) {
+            if (myqueue[i] == NULL) {
+                binaryTree = binaryTree + "#,";
+            } else {
+                binaryTree = binaryTree + to_string(myqueue[i]->val);
+                binaryTree = binaryTree + ",";
+            }
+        }
+
+        return binaryTree;
+    }
+
+    /**
+     * This method will be invoked second, the argument data is what exactly
+     * you serialized at method "serialize", that means the data is not given by
+     * system, it's given by your own serialize method. So the format of data is
+     * designed by yourself, and deserialize it here as you serialize it in
+     * "serialize" method.
+     */
+    TreeNode *deserialize(string data) {
+        if (data.empty()) {
+            return NULL;
+        }
+        
+        int posStart = 0, posEnd = data.find(",", posStart);
+        //cout << stoi(data.substr(posStart, posEnd - posStart)) << " ";
+        TreeNode *root = new TreeNode(stoi(data.substr(posStart, posEnd - posStart)));
+        posStart = posEnd + 1;
+        
+        queue<TreeNode*> myqueue;
+        myqueue.push(root);
+        TreeNode *curt;
+        while (!myqueue.empty() && posStart < data.size()) {
+            curt = myqueue.front();
+            posEnd = data.find(",", posStart);
+            string node = data.substr(posStart, posEnd - posStart);
+            // left subtree
+            if (node[0] != '#') {
+                TreeNode *left = new TreeNode(stoi(node));
+                curt->left = left;
+                myqueue.push(left);
+                posStart = posEnd + 1;
+            }
+            posStart = posEnd + 1;
+            posEnd = data.find(",", posStart);
+            // right subtree
+            node = data.substr(posStart, posEnd - posStart);
+            if (node[0] != '#') {
+                TreeNode *right = new TreeNode(stoi(node));
+                curt->right = right;
+                myqueue.push(right);
+                posStart = posEnd + 1;
+            }
+            posStart = posEnd + 1;
+            posEnd = data.find(",", posStart);
+            myqueue.pop();
+        }
+        
+        return root;
+    }
+};
+```
 
