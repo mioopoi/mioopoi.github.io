@@ -9,11 +9,6 @@ summary:
 
 作者: <a href="http://mioopoi.github.io/about.html",target="_blank">Takashi</a>
 
-# LintCode部分二叉树问题题解
-@(Lcode)[二叉树]
-
-[TOC]
-
 ## LintCode 66: Binary Tree Preorder Traversal (二叉树的前序遍历)
 题目链接: <a href="http://www.lintcode.com/zh-cn/problem/binary-tree-preorder-traversal/", target="_blank"> http://www.lintcode.com/zh-cn/problem/binary-tree-preorder-traversal/ </a>
 
