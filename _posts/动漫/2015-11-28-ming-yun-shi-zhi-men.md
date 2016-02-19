@@ -4,10 +4,11 @@ comments: true
 title: 命运石之门
 category: 动漫
 tags:
-keywords:
 description:
 use_math: false
 ---
+
+作者: <a href="http://mioopoi.github.io/about.html",target="_blank">Takashi</a>
 
 推荐一部动漫，《命运石之门》，英文名叫“Steins; Gate”，中间是分号。
 
