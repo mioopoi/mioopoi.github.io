@@ -9,7 +9,7 @@ summary:
 
 作者: <a href="http://mioopoi.github.io/about.html",target="_blank">Takashi</a>
 
-![东京食尸鬼](https://github.com/mioopoi/Images/2016-02-19-dong-jin-shi-shi-gui-01)
+![东京食尸鬼](Images/2016-02-19-dong-jin-shi-shi-gui-01.jpeg)
 
 补完了《东京食尸鬼》第一季和第二季。我想TV版应该不必再出第三季了吧。
 
