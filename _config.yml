@@ -76,7 +76,7 @@ whitelist: []
 gems:      []
 
 # Conversion
-markdown:    kramdown  # Update time 2016-02-20, formal is redcarpet
+markdown:    redcarpet  # Update time 2016-02-20, formal is redcarpet
 highlighter: rouge   # Update time 2016-02-20, formal is pygments
 lsi:         false
 excerpt_separator: "\n\n"
