@@ -1,6 +1,6 @@
 ---
 title: About
-layout: page
+layout: post
 group: navigation
 comment: true
 ---
