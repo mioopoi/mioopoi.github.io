@@ -12,4 +12,4 @@ My Personal Blog
 
 ## Thanks To
 
-主题从 <https://github.com/SenZhangAI/senzhangai.github.com> 修改而来，感谢原作者！[https://github.com/SenZhangAI/senzhangai.github.com](https://github.com/SenZhangAI/senzhangai.github.com)。
+主题从 <https://github.com/SenZhangAI/senzhangai.github.com> 修改而来，感谢原作者！
