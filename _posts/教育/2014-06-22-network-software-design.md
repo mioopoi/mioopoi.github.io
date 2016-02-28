@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: "网络软件设计课程总结————参加段景山老师“教改班”的体会"
+title: "网络软件设计课程总结——参加段景山老师“教改班”的体会"
 category: 教育
 tags: 计算机网络
 use_math: false
