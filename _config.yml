@@ -34,7 +34,7 @@ comments:
     # because duoshuo is quicker then disqus in China.
     # if not only use in China, disqus is better.
     # disqus.name will be actived if duoshuo's name is null(Just delete it).
-    name: huafan
+    name: huafanliavanda
     rcomments:
         # Number of comments to show
         num: 8
