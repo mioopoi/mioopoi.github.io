@@ -39,4 +39,4 @@ RSS：[{{ site.url }}{{ '/rss.xml' }}](/rss.xml)
 
 {% include support.html %}
 
-{% include comments.html %}
+<!--{% include comments.html %}>
