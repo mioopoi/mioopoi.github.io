@@ -5,9 +5,16 @@ body {
   background-color:rgba(204,204,204,0.3);
 }
 
-.container {
+/*.container {
 	padding:0 5px;
 	width:61.8%;
+}
+*/
+
+@media (min-width: 1200px) {
+  .container {
+    width: 970px;
+  }
 }
 
 :hover,:focus {
