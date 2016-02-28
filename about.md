@@ -1,8 +1,8 @@
 ---
 title: About
-layout: post
+layout: page
 group: navigation
-comment: true
+comments: true
 ---
 
 #### 关于我
