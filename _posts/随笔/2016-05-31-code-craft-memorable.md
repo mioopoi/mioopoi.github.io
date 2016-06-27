@@ -23,7 +23,7 @@ summary:
 
 我们给自己定的目标是进8强。后来下午公布每一轮结果时，看到依次进了16强、8强，也舒缓了一口气：目标达成！但是公布4强时，自己心里还是紧张又期待的。其实挺矛盾，一方面止步8强是一个令自己满意的结果，赶紧结束吧，都花了两个月了，之后就可以忙自己手头的许多事情了；另一方面又抱着一丝希望，因为那样的话就能去深圳了，谁不愿意呢？
 
-![南京苏州赛区复赛队伍合影](http://upload-images.jianshu.io/upload_images/215986-c46c7349b8c5bffa.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![南京苏州赛区复赛队伍合影](https://raw.githubusercontent.com/mioopoi/Images/master/2016-05-31-codecraft-memorable/1.jpg)
 
 结果出乎意料——我们真的进了4强。那一刻，我激动地跳了起来，大声欢呼。后来有朋友告诉我，说我那时就像个欣喜若狂的孩子。我自己当时都没意识到，只觉得，那个时刻，世界属于我们。为什么那么激动，因为强队如云，自己从没对4强有过多少期盼，就算没进4强，也能心安理得；进了4强，那就是意料之外的惊喜了。
 
@@ -35,7 +35,7 @@ summary:
 
 集训的主要内容是对算法进行优化，对代码进行重构。一周的时间相当紧迫，重新设计新的算法时间已经不允许，我们能做的就是对目前代码的一些小改进，或者争取能够解出更多的case，适应更多的输入规模和结构。
 
-![南研所集训](http://upload-images.jianshu.io/upload_images/215986-9f91bbb45fb08a15.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![南研所集训](https://raw.githubusercontent.com/mioopoi/Images/master/2016-05-31-codecraft-memorable/2.jpg)
 
 在集训期间，南研所给我们提供了强大的后勤支持：四星级宾馆、免费的三餐、宽敞的培训场所，以及在学校和研究所之间往返的车费也全部报销。
 
@@ -53,7 +53,7 @@ summary:
 
 为了增加遗传算法的稳定性，我在阅读了一些英文文献后，在我们的遗传算法中加入了一个交叉算子——有向DPX(Distance Preserving Crossover)交叉，经过试验，发现可以显著优化结果。但是会降低算法收敛速度。所以必须小心地引入该算子，比如降低它的调用次数，或者在种群进化到适当的时候开始执行。
 
-![遗传算法](https://mmbiz.qlogo.cn/mmbiz/1ppF3BAyQ6lkfGEPm470bvq1q6YxS5xPgDtHhGoBef18eMd1iaibiaQyyeve47PtKicbravL14BNQwEJ3pTVNqzKqA/0?wx_fmt=jpeg)
+![遗传算法](https://raw.githubusercontent.com/mioopoi/Images/master/2016-05-31-codecraft-memorable/3.jpg)
 
 上面这段代码就是遗传算法的进化函数，我加入的交叉算子被我命名为"make_love"，你可以理解为程序员的恶趣味。写代码不容易，何不幽默一番:P
 
@@ -63,7 +63,7 @@ summary:
 
 比分相同就看净胜分，最后我们输在了净胜分。
 
-![总决赛现场](http://upload-images.jianshu.io/upload_images/215986-fcd4bd41c0be22aa.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![总决赛现场](https://raw.githubusercontent.com/mioopoi/Images/master/2016-05-31-codecraft-memorable/4.jpg)
 
 虽然有遗憾，但是不难过。我觉得我们的算法尽力了。赛后和其他队伍交流，发现我们的算法求解结果也基本是最优解，但是时间就比不上别人了。我们想的是尽可能地利用10s的时间，去求得更好的解，并期望以解的质量战胜对手，区域复赛我们就是这么做的。然而到全国决赛，大家几乎都能解出最优解，在一些case上拼的就是时间。而我们的随机算法在时间上是不占优势的。全国32强的队伍里，也很少有采用随机算法的，基本都是启发式确定算法。
 
@@ -83,11 +83,11 @@ summary:
 
 CodeCraft的赛场再次见证了IT界从来都不是为男孩纸量身定制的。虽然就参赛选手的男女比例而言，男生是占据了绝对优势，但是优秀的队伍中不乏女中豪杰。有图为证：
 
-![成渝赛区区域冠军](http://upload-images.jianshu.io/upload_images/215986-d47c8061702cc9b0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![成渝赛区区域冠军](https://raw.githubusercontent.com/mioopoi/Images/master/2016-05-31-codecraft-memorable/5.jpg)
 
 成渝赛区的区域冠军 "LTZ" (电子科技大学)，就有两位女生。（一个队人数不多于3人）；
 
-![武长赛区四强 (左5-左7为冠军队伍)](http://upload-images.jianshu.io/upload_images/215986-cc9be0f5a50ea9fe.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![武长赛区四强 (左5-左7为冠军队伍)](https://raw.githubusercontent.com/mioopoi/Images/master/2016-05-31-codecraft-memorable/6.jpg)
 
 总决赛冠军队 "六院八队" (国防科技大学)，也有两位女生。
 
@@ -109,7 +109,7 @@ CodeCraft的赛场再次见证了IT界从来都不是为男孩纸量身定制的
 
 **当然，最珍贵的，还是见识了那么多非常牛叉的同学，结交了很多志同道合的朋友**。他们来自全国8个赛区，各大高校。
 
-![深圳](http://upload-images.jianshu.io/upload_images/215986-715bf6ee41353702.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![深圳](https://raw.githubusercontent.com/mioopoi/Images/master/2016-05-31-codecraft-memorable/7.jpg)
 
 深圳之旅，感受的是梦幻，尝到的有苦涩，看到的是差距，收获的是友谊，增加的是动力。
 
@@ -125,8 +125,6 @@ CodeCraft的赛场再次见证了IT界从来都不是为男孩纸量身定制的
 
 一向在媒体面前行事低调的华为总裁任正非最近亮相央视，说的一番话朴素无华而充满力量：
 >......中国现在又冒出来很多企业，其实也跟华为一样，也是专心致志做一件事的。一个人一辈子能做成一件事，已经很不简单了。为什么？中国13亿人民，我们这几个把豆腐磨好，磨成好豆腐；你那几个企业好好去发豆芽，把豆芽做好；我们13亿人每个人做好一件事，拼起来我们就是伟大祖国......
-
-正是：**伟大的企业家造就伟大的企业，伟大的企业造福社会**。
 
 ## 致谢
 

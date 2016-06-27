@@ -31,13 +31,13 @@ summary:
 
 从3月19日第一次到4月11日最后一次，我们累计提交了110次代码。以下是部分提交后的截图，分别对应“第一次提交” “第一次尝试A star算法” “第一次用枚举+Astar+遗传解出所有15个用例”以及“最终的版本——整数规划+遗传算法”：
 
-![第一次提交](https://mmbiz.qlogo.cn/mmbiz/1ppF3BAyQ6kNOeqANmkqudRChqp9P9qhNkbPo8CDUH0tXicQ0xaTSbgGicWciaOHepicUJe5xyjjWib4cRGaMRVeXEQ/0?wx_fmt=png)
+![第一次提交](https://github.com/mioopoi/Images/blob/master/2016-05-02-codecraft-preliminary/f1.jpg)
 
-![第一次尝试A star算法](https://mmbiz.qlogo.cn/mmbiz/1ppF3BAyQ6kNOeqANmkqudRChqp9P9qhS7osTeo2EPIUsC8ibicyJE6NeibNMCEsAvudNNnuI3nfWgfNxeYykheIw/0?wx_fmt=png)
+![第一次尝试A star算法](https://github.com/mioopoi/Images/blob/master/2016-05-02-codecraft-preliminary/f2.jpg)
 
-![第一次用枚举+Astar+遗传解出所有15个用例](https://mmbiz.qlogo.cn/mmbiz/1ppF3BAyQ6kNOeqANmkqudRChqp9P9qhiaTTDSfOLR4rVicnkFI8bVicthMLWzrQhiboY3J9aiaC3PIYaFxwjYk8rcw/0?wx_fmt=png)
+![第一次用枚举+Astar+遗传解出所有15个用例](https://github.com/mioopoi/Images/blob/master/2016-05-02-codecraft-preliminary/f3.jpg)
 
-![最终的版本——整数规划+遗传算法](https://mmbiz.qlogo.cn/mmbiz/1ppF3BAyQ6kNOeqANmkqudRChqp9P9qhhqn17RaHibS7ywfzJBSSOSCNgjB9SUBUyYaclCEfHd78bqBtR1xjYmg/0?wx_fmt=png)
+![最终的版本——整数规划+遗传算法](https://github.com/mioopoi/Images/blob/master/2016-05-02-codecraft-preliminary/f4.jpg)
 
 至于感想，多少还是有些的。**团队合作**不必多说，就算一个团队里没有大神，不错的合作大抵也能起到“三个臭皮匠顶个诸葛亮”的效果；然后就是要**不断尝试新的idea**，不能因为一点小小的进步就自满得意，因为很多时候竞争对手的实力会超出你的想象；另外就是要**广泛获取有价值的信息**，关注比赛动态，看看别人都在尝试哪些路子，也许可以帮助自己获取新的idea，这样可以避免固步自封。最后就是**足够的时间与付出**了，初赛的一个月，虽然我们手头也都有自己的事，但是基本上每天都在提交代码，累计写的代码估计有3000+行。后来华为组织的复赛队伍的见面活动，还了解到有队伍代码写了5000+行的。当然不是说代码量越大越好（听说也有队伍用500行左右就上97分），但是代码量至少从一个方面反映了一个队伍在这项活动中付出的努力。粗略地了解过，基本上初赛进了top64的，大概累计代码量都不会少于1000行。
 
