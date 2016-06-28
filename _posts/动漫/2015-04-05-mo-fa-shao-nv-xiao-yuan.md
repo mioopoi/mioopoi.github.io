@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 魔法少女小圆
+title: 虚渊玄的哲学
 comments: true
 category: 动漫
 tags: [ACG]
