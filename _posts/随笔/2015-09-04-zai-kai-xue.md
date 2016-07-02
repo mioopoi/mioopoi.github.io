@@ -11,7 +11,6 @@ use_math: false
 
 **一 启程**
 学院提前一天开学，8月30日一大早就赶往学校报到。坐地铁，最早的一列，出发时，整个车厢几乎没有什么人。
-<img src="https://mmbiz.qlogo.cn/mmbiz/1ppF3BAyQ6l7rjvQmsffrnLKfKMZvwORrNsiaCZyIos8OiblulvKsBYRiaAZpI0FtCp8fvwdtfdjzMBGHFDWzcxsg/0?wx_fmt=jpeg" style="width:574px;height:652px;" />
 
 地铁三号线一直坐到倒数第二站，就是东南大学的新校区——九龙湖校区。下了地铁后又走了近一个小时才到达寝室，到达时已经浑身湿透......不是地铁口设置得不合理，而是公寓楼离地铁口实在太远——地铁口在校区的东北角，而橘园宿舍区在校区的西南角。中途我走错路差点跑进南师大附中，我说这个学校的女生怎么都一个个跟高中生似的。
 
