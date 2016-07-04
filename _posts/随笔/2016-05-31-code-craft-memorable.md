@@ -2,8 +2,8 @@
 layout: post
 title: "CodeCraft2016区域复赛与全国决赛回顾"
 description: ""
-category: "随笔,CodeCraft,华为"
-tags: [博客]
+category: "随笔"
+tags: [算法,寻路,华为,CodeCraft]
 summary:
 ---
 

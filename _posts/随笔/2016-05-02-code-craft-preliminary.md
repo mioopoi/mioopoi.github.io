@@ -3,7 +3,7 @@ layout: post
 title: "Code Craft 2016初赛的一点体会"
 description: ""
 category: "随笔"
-tags: [博客]
+tags: [算法,寻路,华为,CodeCraft]
 summary:
 ---
 
