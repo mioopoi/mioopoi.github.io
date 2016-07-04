@@ -12,7 +12,7 @@ use_math: false
 
 强烈推荐一部动画，《命运石之门》，英文名叫“Steins; Gate”（中间是分号）。
 
-![命运石之门.jpg](http://upload-images.jianshu.io/upload_images/215986-b527d009c571b8d8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![命运石之门.jpg](http://lain.bgm.tv/pic/cover/l/a9/79/10380_HrKrm.jpg)
 
 > 这是又一部关于时间、空间和人性的哲学命题动画。
 
