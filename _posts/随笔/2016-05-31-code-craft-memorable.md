@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "难忘的三个月"
-description: "Code Craft 2016参赛总结"
-category: "随笔"
+title: "CodeCraft2016区域复赛与全国决赛回顾"
+description: ""
+category: "随笔,CodeCraft,华为"
 tags: [博客]
 summary:
 ---
