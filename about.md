@@ -5,21 +5,31 @@ group: navigation
 comments: true
 ---
 
-#### 关于我
-本科毕业于[电子科技大学](http://www.uestc.edu.cn/) (通信与信息工程学院)，目前在东南大学攻读硕士学位，专业是计算机科学。
+### 关于我
+90后。本科毕业于[电子科技大学](http://www.uestc.edu.cn/)，专业网络工程。目前在东南大学攻读硕士学位，专业是计算机科学。
 
-爱好乒乓球、动画、设计...以及一些新奇的东西。
+- **爱好** 编程、设计、乒乓球、动画、单机游戏。还有猫和狗。
 
-近期最大的目标是把体重提高到`60kg`。
 
-#### 关于这个Blog
-使用**Jekyll**+**Bootstrap-3**搭建，用**Markdown**写作，托管在[GitHub](https://github.com/mioopoi/mioopoi.github.io)上，主题来自[SenZhangAI](https://github.com/SenZhangAI/senzhangai.github.com)前辈。
+- **目前正在做的事情** 写一篇学术论文。
 
-搭建这个网站没有什么特别的原因。主要大概是觉得有个属于自己的Blog会很**酷**，完全就是自己的空间，可以在这里贴上许多有趣的东西，功能不够了还可以自己开发，正所谓自己动手丰衣足食，顺便也学习一些前端的知识。
+
+- **近期最大的目标** 是把体重提高到`60kg`。
+- **最近状态** `松懈`
+
+注:  「最近状态」一项，目前从这个集合中选出：
+
+{`颓废`, `焦虑`, `松懈`, `放松`, `忙碌`, `沉静`, `幸福`,  `感觉自己可以改变世界`}
+
+### 关于这个Blog
+使用**[Jekyll](https://jekyllrb.com/)** + **[Bootstrap-3](http://v3.bootcss.com/)**搭建，用**[Markdown](http://sspai.com/25137)**写作，托管在[GitHub](https://github.com/mioopoi/mioopoi.github.io)上，主题来自[SenZhangAI](https://github.com/SenZhangAI/senzhangai.github.com)前辈。
+
+搭建这个网站没有什么特别的原因。主要大概是觉得有个属于自己的Blog会很**酷**，完全就是自己的空间，可以在这里贴上许多有趣的东西，功能不够了还可以自己开发，正所谓自己动手丰衣足食。
 
 Anyway，如果这里的东西对你有或多或少的启发，我会很开心的。
 
-#### 联系我
+
+### 联系我
 
 {% if site.author.email %}
 Email：{{ site.author.email }}
