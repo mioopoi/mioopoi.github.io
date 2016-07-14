@@ -37,7 +37,7 @@ int binarySearch(vector<int>& A, int target, int left, int right) {
 比起递归，循环实现虽然不太容易，但是有其必要性和好处，比如不会有堆栈溢出的问题，而且通常比递归效率高。C++代码：
 
 ```c++
-int findPosition(vector<int>& A, int target) {
+int binarySearch(vector<int>& A, int target) {
     if (A.empty()) {
         return -1;
     }
@@ -59,6 +59,7 @@ int findPosition(vector<int>& A, int target) {
         return right;
     }
     return -1;
+}
 ```
 
-上面的代码有很好的通用性，可以用作二分搜索的模板。至于循环判断条件为什么用`left + 1 < right`而不用其他的表达式，以及为什么在循环结束后还要加上两个if语句，都是有原因的，请仔细思考这些做法的好处。上面的代码稍作修改就可以处理一类二分搜索问题，比如求第一次（或最后一次）出现的`target`下标、`target`出现的次数，等等。
+上面的代码有很好的通用性，可以用作二分搜索的模板。至于循环判断条件为什么用`left + 1 < right`而不用其他的表达式，以及为什么在循环结束后还要加上两个if语句，请仔细思考这些做法的好处。上面的代码稍作修改就可以处理一类二分搜索问题，比如求第一次（或最后一次）出现的`target`下标、`target`出现的次数，等等。
