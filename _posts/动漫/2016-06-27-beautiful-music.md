@@ -3,17 +3,21 @@ layout: post
 title: "来，一起欣赏好听的音乐"
 description: ""
 category: "动漫"
-tags: [音乐]
+tags: [音乐,动漫原声]
 summary:
 ---
 
-作者: <a href="http://mioopoi.github.io/about.html",target="_blank">Takashi</a>
+作者: [Takashi](http://mioopoi.github.io/about.html)
 
-今天就来随便听听几首吧...
+闲下来、或者焦虑的时候，听听那些曾经给予过你心灵触动的电影(动画)的曲子，可以起到快速调节情绪的功效。无论是OP、ED还是插曲。
 
 下面这首，你不需要了解歌的含义，就这样听节奏就好。
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="http://music.163.com/outchain/player?type=2&id=26116370&auto=1&height=66"></iframe>
+
+没有什么特别选择的时候，就听这个。它是一个大杂烩，许多曲子的融合，里面一定有你熟悉的。
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="http://music.163.com/outchain/player?type=2&id=424624&auto=0&height=66"></iframe>
 
 下面的这些，随便点着播放，不用一定按顺序来，因为有很多，很多~
 
