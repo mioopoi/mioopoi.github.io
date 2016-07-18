@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Floyd's cycle-finding algorithm (链表判环)"
+title: "带环链表"
 description: ""
 category: "算法"
 tags: [链表,数学]
@@ -22,6 +22,8 @@ summary:
 ## 分析
 
 当然，一个容易想到的办法是维护一个Hash Table，每访问一个节点，就将其记录下来，第一次重复访问了某一个节点时，就说明链表有环，而且该点就是环的起点。然而建立哈希表需要额外$O(n)$的空间开销，下面要讨论的方法不但不损失时间效率，而且不需要额外的空间消耗。
+
+相信不少人都知道**快慢指针**一说。用快慢指针，看他们能不能相遇嘛...可是，为什么快慢指针是可行的？为什么快指针的速度是慢指针的2倍而不是3倍、5倍？为什么2倍关系的快慢指针一定会相遇？怎么证明？如果不弄清这些问题，就算代码写出来了，也只能说处于「一知半解」的层面，理解代码背后的思想，才是主要的。
 
 可以认为带环链表是一个无限长序列，只是这个序列有一部分是周期序列。用$x_i (i=0,1,2,\ldots)$表示这个无限长序列的第$i$个元素，用$\lambda$表示环的长度，并设$x_{\mu} (\mu \ge 1 )$是环的起点。则对所有的$i \ge \mu$，有下式成立：
 
@@ -117,4 +119,4 @@ ListNode *detectCycle(ListNode *head) {
 
 ## 参考
 
-1. Wikipedia, Cycle detection, https://en.wikipedia.org/wiki/Cycle_detection#CITEREFJoux2009
+1. Wikipedia, Cycle detection, https://en.wikipedia.org/wiki/Cycle_detection
