@@ -12,6 +12,10 @@ comments: true
 
 
 - **目前正在做的事情** 写一篇学术论文。
+- **目前正在看的书**
+  - [数据结构与算法分析: 语言描述(第2版)](https://book.douban.com/subject/1139426/)
+  - [写给大家看的设计书(第4版)](http://www.ituring.com.cn/book/1757)
+  - [三体:"地球往事"三部曲之一](https://book.douban.com/subject/2567698/)
 
 
 - **近期最大的目标** 是把体重提高到`60kg`。
