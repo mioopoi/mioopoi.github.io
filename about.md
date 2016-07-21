@@ -13,7 +13,8 @@ comments: true
 
 - **目前正在做的事情** 写一篇学术论文。
 - **目前正在看的书**
-  - [数据结构与算法分析: 语言描述(第2版)](https://book.douban.com/subject/1139426/)
+  - [数据结构与算法分析: C语言描述(第2版)](https://book.douban.com/subject/1139426/)
+  - [数学之美](https://book.douban.com/subject/10750155/)
   - [写给大家看的设计书(第4版)](http://www.ituring.com.cn/book/1757)
   - [三体:"地球往事"三部曲之一](https://book.douban.com/subject/2567698/)
 
