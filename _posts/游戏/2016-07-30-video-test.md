@@ -12,18 +12,15 @@ summary: ""
 示例：
 
 ```html
-<embed src="https://www.jiumodiary.com/videos/titan/titan1.mp4" />
-```
-
-可以通过加入`width`和`height`字段来调整嵌入视频的宽和高：
-
-```html
-<embed width="320" height="240" src="https://www.jiumodiary.com/videos/titan/titan1.mp4" />
+<embed width="640" height="360" autostart="false" src="https://www.jiumodiary.com/videos/titan/titan1.mp4" />
 ```
 
 请欣赏*AMV – 進撃の巨人*：
 
-<embed width="320" height="240" src="https://www.jiumodiary.com/videos/titan/titan1.mp4" />
+<video id="video" controls="" preload="none" poster="" width="640" height="360">
+<source id="mp4" src="https://www.jiumodiary.com/videos/titan/titan1.mp4" type="video/mp4">
+<p>Your user agent does not support the HTML5 Video element.</p>
+</video>
 
 ## 使用`<video>`标签
 
