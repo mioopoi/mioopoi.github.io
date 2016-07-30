@@ -4,8 +4,9 @@ layout: default
 <div class="col-md-9">
   {% for post in paginator.posts %}
     <article class="article-title">
-      <h3>
-      	<font face="楷体"> <a href="{{ post.url }}">{{ post.title }}</a> </font>
+      <h3 style="font-family:Trebuchet MS">
+      	<!-- <font face="楷体"> <a href="{{ post.url }}">{{ post.title }}</a> </font> -->
+        <a href="{{ post.url }}">{{ post.title }}</a>
       </h3>
       {{ post.description }}
       <div class="post-date">
