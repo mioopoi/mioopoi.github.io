@@ -7,37 +7,72 @@ tags: [Test,Style]
 summary: ""
 ---
 
-## 使用`<embed>`标签
+## 使用`<videl>`标签
 
-示例：
+示例1：
 
 ```html
-<embed width="640" height="360" autostart="false" src="https://www.jiumodiary.com/videos/titan/titan1.mp4" />
-```
-
-请欣赏*AMV – 進撃の巨人*：
-
+<div style="max-width:640px; margin:0 auto 32px;" >
+<div 
+style="position: relative; 
+width:100%;
+padding-bottom:65%; /* 16:9 */ 
+height:0;">
 <video id="video" controls="" preload="none" poster="" width="640" height="360">
 <source id="mp4" src="https://www.jiumodiary.com/videos/titan/titan1.mp4" type="video/mp4">
 <p>Your user agent does not support the HTML5 Video element.</p>
 </video>
-
-## 使用`<video>`标签
-
-```html
-<video id="video" controls="" preload="none" poster="http://media.w3.org/2010/05/sintel/poster.png">
-      <source id="mp4" src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
-      <source id="webm" src="http://media.w3.org/2010/05/sintel/trailer.webm" type="video/webm">
-      <source id="ogv" src="http://media.w3.org/2010/05/sintel/trailer.ogv" type="video/ogg">
-      <p>Your user agent does not support the HTML5 Video element.</p>
-    </video>
+</div>
+</div>
 ```
 
-这是一段游戏的资料片：
+是*進撃の巨人*的一段AMV：
 
-<video id="video" controls="" preload="none" poster="http://media.w3.org/2010/05/sintel/poster.png">
-<source id="mp4" src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
-<source id="webm" src="http://media.w3.org/2010/05/sintel/trailer.webm" type="video/webm">
-<source id="ogv" src="http://media.w3.org/2010/05/sintel/trailer.ogv" type="video/ogg">
+<div style="max-width:640px; margin:0 auto 32px;" >
+<div 
+style="position: relative; 
+width:100%;
+padding-bottom:65%; /* 16:9 */ 
+height:0;">
+<video id="video" controls="" preload="none" poster="" width="640" height="360">
+<source id="mp4" src="https://www.jiumodiary.com/videos/titan/titan1.mp4" type="video/mp4">
 <p>Your user agent does not support the HTML5 Video element.</p>
 </video>
+</div>
+</div>
+
+示例2：
+
+```html
+<div style="max-width:640px; margin:0 auto 32px;" >
+<div 
+style="position: relative; 
+width:100%;
+padding-bottom:65%; /* 16:9 */ 
+height:0;">
+<video id="video" controls="" preload="none" poster="http://media.w3.org/2010/05/sintel/poster.png">
+  <source id="mp4" src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
+  <source id="webm" src="http://media.w3.org/2010/05/sintel/trailer.webm" type="video/webm">
+  <source id="ogv" src="http://media.w3.org/2010/05/sintel/trailer.ogv" type="video/ogg">
+  <p>Your user agent does not support the HTML5 Video element.</p>
+</video>
+</div>
+</div>
+```
+
+是一段游戏的资料片：
+
+<div style="max-width:640px; margin:0 auto 32px;" >
+<div 
+style="position: relative; 
+width:100%;
+padding-bottom:65%; /* 16:9 */ 
+height:0;">
+<video id="video" controls="" preload="none" poster="http://media.w3.org/2010/05/sintel/poster.png">
+  <source id="mp4" src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
+  <source id="webm" src="http://media.w3.org/2010/05/sintel/trailer.webm" type="video/webm">
+  <source id="ogv" src="http://media.w3.org/2010/05/sintel/trailer.ogv" type="video/ogg">
+  <p>Your user agent does not support the HTML5 Video element.</p>
+</video>
+</div>
+</div>
