@@ -1,10 +1,11 @@
+
 My Personal Blog
 ======
 
-> 该博客使用 jekyll+bootstrap-3+Markdown 搭建。
-> 
+> 该博客使用 Jekyll+Bootstrap-3 搭建。
+>
 > 使用本主题，请先修改以下内容：
-> 
+>
 > - 修改 _config.yaml
 > - 修改 CNAME
 > - 修改 about.md个人简介中的内容
