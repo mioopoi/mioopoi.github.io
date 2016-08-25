@@ -13,15 +13,11 @@ comments: true
 90后。本科毕业于[电子科技大学](http://www.uestc.edu.cn/)，专业网络工程。目前在东南大学攻读计算机科学硕士学位。
 
 - **爱好** 编程、设计、乒乓球、动画、单机游戏。还有喵和汪。
-
-
 - **目前正在做的事情** 写一篇学术论文。
 - **目前正在看的书**
   - [The Ph.D. Grind](https://book.douban.com/subject/11505704/)
   - [深入理解计算机系统](https://book.douban.com/subject/1230413/)
   - [数据结构与算法分析: C语言描述(第2版)](https://book.douban.com/subject/1139426/)
-
-
   - [数学之美](https://book.douban.com/subject/10750155/)
   - [写给大家看的设计书(第4版)](http://www.ituring.com.cn/book/1757)
   - [三体:"地球往事"三部曲之一](https://book.douban.com/subject/2567698/) (`100%`)
