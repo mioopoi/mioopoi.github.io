@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "研一小结"
-description: ""
+title: "Re:从零开始的研究生生活"
+description: "研一小结"
 category: "随笔"
 tags: [科研,生活,总结]
 summary: ""
