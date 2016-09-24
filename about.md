@@ -15,6 +15,7 @@ comments: true
 - **爱好** 编程、设计、乒乓球、动画、单机游戏。还有喵和汪。
 - **目前正在做的事情** 写一篇学术论文。
 - **目前正在看的书**
+  - [Algorithms (4th Edition)](https://www.amazon.cn/%E7%AE%97%E6%B3%95-%E5%A1%9E%E5%A5%87%E5%A8%81%E5%85%8B-%E9%9F%A6%E6%81%A9/dp/B01DN6FIRM/ref=sr_1_1?ie=UTF8&qid=1472738405&sr=8-1&keywords=Algorithms) (`26%`)
   - [The Ph.D. Grind](https://book.douban.com/subject/11505704/)
   - [深入理解计算机系统](https://book.douban.com/subject/1230413/)
   - [数据结构与算法分析: C语言描述(第2版)](https://book.douban.com/subject/1139426/)
