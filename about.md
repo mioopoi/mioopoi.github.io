@@ -12,12 +12,10 @@ comments: true
 
 90后。本科毕业于[电子科技大学](http://www.uestc.edu.cn/)通信学院。目前在东南大学攻读计算机科学硕士学位。
 
-- **研究方向** 城市计算，无线通信，计算机网络
-
-
+- **关注** 算法设计、机器学习、数据挖掘
 - **爱好** 编程、设计、乒乓球、动画、单机游戏。还有喵和汪。
-- **目前正在做的事情** 写一篇学术论文。
-- **目前正在看的书**
+- **正在做的事情** 写一篇学术论文。
+- **正在看的书**
   - [Algorithms (4th Edition)](https://www.amazon.cn/%E7%AE%97%E6%B3%95-%E5%A1%9E%E5%A5%87%E5%A8%81%E5%85%8B-%E9%9F%A6%E6%81%A9/dp/B01DN6FIRM/ref=sr_1_1?ie=UTF8&qid=1472738405&sr=8-1&keywords=Algorithms) (`26%`)
   - [The Ph.D. Grind](https://book.douban.com/subject/11505704/) (`90%`)
   - [深入理解计算机系统](https://book.douban.com/subject/1230413/)
@@ -26,8 +24,6 @@ comments: true
   - [写给大家看的设计书(第4版)](http://www.ituring.com.cn/book/1757)
   - [三体:"地球往事"三部曲之一](https://book.douban.com/subject/2567698/) (`100%`)
   - [追风筝的人](https://book.douban.com/subject/1770782/) (`50%`)
-
-
 - **近期最大的目标** 是把体重提高到`60kg`。
 - **最近状态** `忙碌`
 
