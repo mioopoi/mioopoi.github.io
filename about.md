@@ -10,13 +10,16 @@ comments: true
 
 ![huafan-codecraft](https://cl.ly/1x261c1I0N29/mmexport1467890508575.jpg)
 
-90后。本科毕业于[电子科技大学](http://www.uestc.edu.cn/)，专业网络工程。目前在东南大学攻读计算机科学硕士学位。
+90后。本科毕业于[电子科技大学](http://www.uestc.edu.cn/)通信学院。目前在东南大学攻读计算机科学硕士学位。
+
+- **研究方向** 城市计算，无线通信，计算机网络
+
 
 - **爱好** 编程、设计、乒乓球、动画、单机游戏。还有喵和汪。
 - **目前正在做的事情** 写一篇学术论文。
 - **目前正在看的书**
   - [Algorithms (4th Edition)](https://www.amazon.cn/%E7%AE%97%E6%B3%95-%E5%A1%9E%E5%A5%87%E5%A8%81%E5%85%8B-%E9%9F%A6%E6%81%A9/dp/B01DN6FIRM/ref=sr_1_1?ie=UTF8&qid=1472738405&sr=8-1&keywords=Algorithms) (`26%`)
-  - [The Ph.D. Grind](https://book.douban.com/subject/11505704/)
+  - [The Ph.D. Grind](https://book.douban.com/subject/11505704/) (`90%`)
   - [深入理解计算机系统](https://book.douban.com/subject/1230413/)
   - [数据结构与算法分析: C语言描述(第2版)](https://book.douban.com/subject/1139426/)
   - [数学之美](https://book.douban.com/subject/10750155/)
