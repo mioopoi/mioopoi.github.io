@@ -59,7 +59,7 @@ Twitter：<https://twitter.com/{{ site.author.twitter }}>
 {% endif %}
 
 {% if site.author.zhihu %}
-Zhihu: <https://zhihu.com/{{ site.author.zhihu }}>
+Zhihu: <{{ site.author.zhihu }}>
 {% endif %}
 
 {% if site.url %}
