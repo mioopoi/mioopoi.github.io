@@ -35,7 +35,7 @@ comments: true
 ### 关于这个Blog
 使用**[Jekyll](https://jekyllrb.com/)** + **[Bootstrap-3](http://v3.bootcss.com/)**搭建，用**[Markdown](http://sspai.com/25137)**写作，托管在[GitHub](https://github.com/mioopoi/mioopoi.github.io)上，主题来自[SenZhangAI](https://github.com/SenZhangAI/senzhangai.github.com)前辈。
 
-搭建这个网站没有什么特别的原因。主要大概是觉得有个属于自己的Blog会很**酷**，完全就是自己的空间，想些什么就写什么，可以在这里贴上许多有趣的内容，功能不够了还可以自己开发，正所谓自己动手丰衣足食。
+搭建这个网站没有什么特别的原因。主要大概是觉得有个属于自己的Blog会很**酷**，完全就是自己的空间，想写什么就写什么，可以在这里贴上许多有趣的内容，功能不够了还可以自己开发，正所谓自己动手丰衣足食。
 
 Anyway，如果这里的东西对你有或多或少的启发，我会很开心的。
 
