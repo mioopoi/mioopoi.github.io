@@ -7,7 +7,7 @@ tags: [hackerrank]
 summary:
 ---
 
-作者: [小华](http://ihuafan.com/about)
+作者: [小华](http://ihuafan.com/about.html)
 
 - book site: http://algs4.cs.princeton.edu/home/
 - 用Java语言描述
