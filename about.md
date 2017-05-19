@@ -6,7 +6,7 @@ comments: true
 ---
 
 ### 关于我
-附上一张照片，左一是我:)  (摄于2016华为软件精英挑战赛全国总决赛现场)
+附上一张照片，左一是我:)  (摄于CodeCraft2016全国总决赛现场)
 
 ![huafan-codecraft](https://cl.ly/1x261c1I0N29/mmexport1467890508575.jpg)
 
@@ -16,7 +16,7 @@ comments: true
 - **爱好** 编程、设计、乒乓球、动画、单机游戏。还有喵和汪。
 - **正在做的事情** 准备毕业论文开题。
 - **正在看的书**
-  - [C语言的科学和艺术](https://book.douban.com/subject/1289136/) (`50%`)
+  - [C语言的科学和艺术](https://book.douban.com/subject/1289136/) (`100%`)
   - [Algorithms (4th Edition)](https://www.amazon.cn/%E7%AE%97%E6%B3%95-%E5%A1%9E%E5%A5%87%E5%A8%81%E5%85%8B-%E9%9F%A6%E6%81%A9/dp/B01DN6FIRM/ref=sr_1_1?ie=UTF8&qid=1472738405&sr=8-1&keywords=Algorithms) (`26%`)
   - [The Ph.D. Grind](https://book.douban.com/subject/11505704/) (`100%`)
   - [深入理解计算机系统](https://book.douban.com/subject/1230413/)
@@ -25,12 +25,12 @@ comments: true
   - [写给大家看的设计书(第4版)](http://www.ituring.com.cn/book/1757)
   - [三体:"地球往事"三部曲之一](https://book.douban.com/subject/2567698/) (`100%`)
   - [追风筝的人](https://book.douban.com/subject/1770782/) (`50%`)
-- **近期最大的目标** 是把体重提高到`60kg`。
-- **最近状态** `忙碌`
+- **近期最大的目标** 秋招求职顺利。
+- **最近状态** `放松`
 
 注:  「最近状态」一项，目前从下面这个集合中选出：
 
-{`颓废`, `焦虑`, `松懈`, `放松`, `忙碌`, `沉静`, `幸福`}
+{ `焦虑`, `松懈`, `放松`, `忙碌`, `沉静`, `幸福`}
 
 ### 关于这个Blog
 使用**[Jekyll](https://jekyllrb.com/)** + **[Bootstrap-3](http://v3.bootcss.com/)**搭建，用**[Markdown](http://sspai.com/25137)**写作，托管在[GitHub](https://github.com/mioopoi/mioopoi.github.io)上，主题来自[SenZhangAI](https://github.com/SenZhangAI/senzhangai.github.com)前辈。
