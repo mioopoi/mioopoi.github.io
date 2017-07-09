@@ -10,32 +10,17 @@ comments: true
 
 ![huafan-codecraft](https://cl.ly/1x261c1I0N29/mmexport1467890508575.jpg)
 
-90后。本科毕业于[电子科技大学](http://www.uestc.edu.cn/)通信学院。目前在东南大学攻读计算机科学硕士学位。
+90后。本科毕业于[电子科技大学](http://www.uestc.edu.cn/)通信学院，目前在东南大学攻读计算机科学硕士学位。
 
-- **关注** 算法设计、计算机网络、机器学习。
-- **爱好** 编程、设计、乒乓球、动画、单机游戏。还有喵和汪。
-- **正在做的事情** 准备毕业论文开题。
-- **正在看的书**
-  - [C语言的科学和艺术](https://book.douban.com/subject/1289136/) (`100%`)
-  - [Algorithms (4th Edition)](https://www.amazon.cn/%E7%AE%97%E6%B3%95-%E5%A1%9E%E5%A5%87%E5%A8%81%E5%85%8B-%E9%9F%A6%E6%81%A9/dp/B01DN6FIRM/ref=sr_1_1?ie=UTF8&qid=1472738405&sr=8-1&keywords=Algorithms) (`26%`)
-  - [The Ph.D. Grind](https://book.douban.com/subject/11505704/) (`100%`)
-  - [深入理解计算机系统](https://book.douban.com/subject/1230413/)
-  - [数据结构与算法分析: C语言描述(第2版)](https://book.douban.com/subject/1139426/)
-  - [数学之美](https://book.douban.com/subject/10750155/)
-  - [写给大家看的设计书(第4版)](http://www.ituring.com.cn/book/1757)
-  - [三体:"地球往事"三部曲之一](https://book.douban.com/subject/2567698/) (`100%`)
-  - [追风筝的人](https://book.douban.com/subject/1770782/) (`50%`)
-- **近期最大的目标** 秋招求职顺利。
-- **最近状态** `放松`
-
-注:  「最近状态」一项，目前从下面这个集合中选出：
-
-{ `焦虑`, `松懈`, `放松`, `忙碌`, `沉静`, `幸福`}
+- **关注领域** 算法设计、运筹优化、机器学习、计算机网络
+- **兴趣爱好** 乒乓球、动画、单机游戏，以及喵和汪
+- **近期最大的目标** 秋招求职顺利
+- **最近状态** 忙碌
 
 ### 关于这个Blog
 使用**[Jekyll](https://jekyllrb.com/)** + **[Bootstrap-3](http://v3.bootcss.com/)**搭建，用**[Markdown](http://sspai.com/25137)**写作，托管在[GitHub](https://github.com/mioopoi/mioopoi.github.io)上，主题来自[SenZhangAI](https://github.com/SenZhangAI/senzhangai.github.com)前辈。
 
-搭建这个网站没有什么特别的原因。主要大概是觉得有个属于自己的Blog会很**酷**，完全就是自己的空间，想写什么就写什么，可以在这里贴上许多有趣的内容，功能不够了还可以自己开发，正所谓自己动手丰衣足食。
+搭建这个网站没有什么特别的原因，主要大概是觉得有个属于自己的Blog会很**酷**，完全就是自己的空间，想写什么就写什么。另外就是有时一些零碎的想法几句话说不完，就想汇成文章，或发表观点、或总结知识、或重塑思维，可以在这里贴上许多有趣的内容，功能不够了还可以自己开发，正所谓自己动手丰衣足食。
 
 Anyway，如果这里的东西对你有或多或少的启发，我会很开心的。
 
@@ -45,6 +30,8 @@ Anyway，如果这里的东西对你有或多或少的启发，我会很开心�
 {% if site.author.email %}
 Email：{{ site.author.email }}
 {% endif %}
+
+QQ: `864439764` (备注请至少告知职业~)
 
 {% if site.author.weibo %}
 Weibo：<http://weibo.com/{{ site.author.weibo }}>
