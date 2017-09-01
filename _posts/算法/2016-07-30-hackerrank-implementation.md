@@ -11,9 +11,7 @@ summary:
 
 https://www.hackerrank.com/challenges/non-divisible-subset
 
-挺难的一题，需要一点数论的知识。
-
-idea就是：要使子集中任意两个数之和不能被k整除，等价于**任意两个数被k除的余数之和**不能被k整除。而所有余数的可能是比较少的，即0, 1, ..., k-1。用一个Hash统计每个余数出现的次数。
+需要一点数论的知识。idea是：要使子集中任意两个数之和不能被k整除，等价于**任意两个数被k除的余数之和**不能被k整除。而所有余数的可能是比较少的，即0, 1, ..., k-1。用一个Hash统计每个余数出现的次数。
 
 如果k=1，那么集合内所有数都能被k整除，子集最多只能有一个数；
 
@@ -74,7 +72,7 @@ int main() {
 
 https://www.hackerrank.com/challenges/jumping-on-the-clouds
 
-很简单的一题，贪心即可。
+贪心即可。
 
 ```cpp
 int main(){
