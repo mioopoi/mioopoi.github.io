@@ -7,8 +7,6 @@ tags: [链表,数学]
 summary:
 ---
 
-作者: [Takashi](http://mioopoi.github.io/about.html)
-
 ## 问题
 
 如何判断一个链表是否有环？如果是，如何确定环的起点？

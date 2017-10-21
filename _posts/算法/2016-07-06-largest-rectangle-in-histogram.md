@@ -7,7 +7,6 @@ tags: LintCode, Divide and Conquer, stack
 summary:
 ---
 
-
 题目链接: http://www.lintcode.com/problem/largest-rectangle-in-histogram/
 
 ## 暴力搜索

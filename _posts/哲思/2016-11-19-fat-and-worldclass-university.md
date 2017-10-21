@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 「长胖」与「世界一流大学」
+title: 实现目标与维持目标
 category: 哲思
 tags: [tweet]
 summary:

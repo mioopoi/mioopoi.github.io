@@ -7,11 +7,9 @@ tags: [分治,Divide & Conquer,二叉树]
 summary:
 ---
 
-作者: <a href="http://mioopoi.github.io/about.html",target="_blank">Takashi</a>
-
 二叉树三种遍历方法的递归实现很简单，但是有必要掌握非递归实现，因为非递归实现不会有栈溢出的问题，通常效率也更高一些。
 
-二叉树的数据结构说明: (如未说明，后面贴出的代码均是C++代码)
+二叉树的数据结构说明: (如未说明，后面贴出的代码均是`C++11`代码)
 
 ```c++
 struct TreeNode {
@@ -177,9 +175,10 @@ void inorderTraversal(TreeNode *root) {
 }
 ```
 
-还有一种非递归实现方法是不采用栈，但是需要知道一个节点的父节点信息，思路和用栈的方法一样，只不过有一个回溯的过程，这里就不详细说了，具体可以参考<a href="http://www.cnblogs.com/shuaiwhu/archive/2011/04/20/2065055.html", target="_blank">http://www.cnblogs.com/shuaiwhu/archive/2011/04/20/2065055.html</a>
+还有一种非递归实现方法是不采用栈，但是需要知道一个节点的父节点信息，思路和用栈的方法一样，只不过有一个回溯的过程，这里就不详细说了，具体可以参考[这里](http://www.cnblogs.com/shuaiwhu/archive/2011/04/20/2065055.html)。
 
 ## 后序遍历
+
 二叉树的后序遍历，先访问左子树，然后访问右子树，最后访问根节点（左-右-根）。在子树上也用同样的顺序进行遍历。
 
 ### 递归实现
@@ -204,7 +203,7 @@ void postorderTraversal(TreeNode *root)
 1. 先将根节点入栈，然后一直沿左子树进行DFS，中途将所有节点入栈，直到叶子节点；
 2. 此时不能立即弹出栈顶元素并输出其值，因为其右孩子还没有被访问；
 3. 如果栈顶元素的右孩子不为空，则按步骤1的方法处理右子树；
-否则可以弹出栈顶元素并输出其值，注意更新`lastVisited`变量（指向被弹出的栈顶节点）
+   否则可以弹出栈顶元素并输出其值，注意更新`lastVisited`变量（指向被弹出的栈顶节点）
 
 ```c++
 void postorderTraversal(TreeNode *root) {

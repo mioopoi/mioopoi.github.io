@@ -1,17 +1,13 @@
 ---
 layout: post
-title: "致『东京喰种』动画"
+title: "东京喰种"
 description: ""
 category: "动漫"
 tags: [漫画改编]
 summary:
 ---
 
-作者: <a href="http://mioopoi.github.io/about.html",target="_blank">Takashi</a>
-
-<img src="https://raw.githubusercontent.com/mioopoi/Images/master/2016-02-19-dong-jin-shi-shi-gui-01.jpeg" style="width:574px;height:652px;" />
-
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="http://music.163.com/outchain/player?type=2&id=30706129&auto=1&height=66"></iframe>
+![东京喰种](http://lain.bgm.tv/pic/cover/c/12/ab/93714_r1U22.jpg)
 
 补完了《东京食尸鬼》第一季和第二季。我想TV版应该不必再出第三季了吧。
 
@@ -25,4 +21,4 @@ TV版和漫画的剧情发展有很大的不同。我猜想『TV版』本就打�
 
 另外，作品的剧情走向和人物刻画也使得我对其中的人物感觉不真切。对主角已经不知道该怎么评价了，总是处于激烈的心理对抗之中，总是受虐，即使黑化了实力也没有到我心中期待的那样——黑化了继续矛盾、继续受虐，最后失去了一切，抱着基友，却将董香抛之脑后；对董香，我只能说她太不容易了，爱上了金木，为了他拼命学习，即便最后所有的努力都付之一炬，依然遵循着自己的内心，努力生活；咖啡馆的成员给人一种岁月静好的感觉；CCG也总给人一种『同甘共苦，为了正义而献身』的悲壮……最后到底谁是主角我都搞不清了。要说我最喜欢的人物，那应该是雏实小妹妹，虽然成为了孤儿，依然坚强、可爱、善解人意、热爱生活。
 
-不过，我觉得音乐是很大的亮点，那首[Glassy Sky](http://music.163.com/#/song?id=30706129&autoplay=true)确实很有穿透力。
+不过，我觉得音乐是很大的亮点，那首[Glassy Sky](http://music.163.com/#/song?id=423703431)确实很有穿透力。

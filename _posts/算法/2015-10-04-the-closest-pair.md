@@ -13,10 +13,10 @@ use_math: true
 给了平面上若干个点的坐标，求最近的两个点之间的距离。
 
 可供练习此问题的地方有:
-<a href="http://acm.hdu.edu.cn/showproblem.php?pid=1007" target="_blank">HDU 1007</a>
-<a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1186" target="_blank">UVa 10245</a>
-<a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemId=1107"_blank">ZOJ 2107</a> (和HDU 1007一样)
-<a href="http://poj.org/problem?id=3714" target="_blank">POJ 3714</a> (问题稍有变化，是求两个不同点集的最近点对)
+- [HDU 1007](http://acm.hdu.edu.cn/showproblem.php?pid=1007)
+- [UVa 10245](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1186)
+- [ZOJ 2107](http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemId=1107) (和HDU 1007一样)
+- [POJ 3714](http://poj.org/problem?id=3714) (问题稍有变化，是求两个不同点集的最近点对)
 
 ## 思路
 ### 方法一：Brute Force

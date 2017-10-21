@@ -11,7 +11,7 @@ summary:
 
 ## LintCode 109: Triangle (数字三角形)
 
-题目链接: <a href="http://www.lintcode.com/zh-cn/problem/triangle/", target="_blank">http://www.lintcode.com/zh-cn/problem/triangle/</a>
+http://www.lintcode.com/zh-cn/problem/triangle/
 
 经典的动态规划问题。定义`f(i,j)`表示从`triangle(i,j)`到底部的最小路径和，则有状态转移方程：
 `f(i,j) = triangle(i,j) + min(f(i+1,j), f(i+1,j+1))`
@@ -56,9 +56,7 @@ public:
 
 ## LintCode 110: minimum path sum (最小路径和)
 
-题目链接: <a href="http://www.lintcode.com/zh-cn/problem/minimum-path-sum/", target="_blank"> http://www.lintcode.com/zh-cn/problem/minimum-path-sum/ </a>
-
-简单的DP。
+http://www.lintcode.com/zh-cn/problem/minimum-path-sum/
 
 ```cpp
 class Solution {
@@ -96,7 +94,7 @@ public:
 
 ## LintCode 111: Climbing Stairs (爬楼梯)
 
-题目链接: <a href="http://www.lintcode.com/zh-cn/problem/climbing-stairs/", target="_blank"> http://www.lintcode.com/zh-cn/problem/climbing-stairs/ </a>
+http://www.lintcode.com/zh-cn/problem/climbing-stairs/
 
 很有趣的问题。设f(i)表示到第i级楼梯上的方法数，那么有: f(i) = f(i-1) + f(i-2)，意思是可以从(i-1)级跳一级，或者从第(i-2)级跳两级到达第i级。边界条件: f(0) = 1 (不跳也是一种方法), f(1) = 1。可见，这是一个**Fibonacci**数列~
 
@@ -144,9 +142,7 @@ public:
 
 ## LintCode 114: Unique Paths (不同的路径)
 
-题目链接: <a href="http://www.lintcode.com/zh-cn/problem/unique-paths/", target="_blank"> http://www.lintcode.com/zh-cn/problem/unique-paths/ </a>
-
-简单的DP。
+http://www.lintcode.com/zh-cn/problem/unique-paths/
 
 ```cpp
 class Solution {
@@ -178,7 +174,7 @@ public:
 
 ## LintCode 115: Unique Paths II
 
-题目链接: <a href="http://www.lintcode.com/zh-cn/problem/unique-paths-ii/", target="_blank"> http://www.lintcode.com/zh-cn/problem/unique-paths-ii/ </a>
+http://www.lintcode.com/zh-cn/problem/unique-paths-ii/
 
 在上一题基础上加一些判断就好。
 
@@ -229,7 +225,7 @@ public:
 
 ## LintCode 76: Longest Increasing Subsequence (最长上升子序列)
 
-题目链接: <a href="http://www.lintcode.com/zh-cn/problem/longest-increasing-subsequence/", target="_blank"> http://www.lintcode.com/zh-cn/problem/longest-increasing-subsequence/ </a>
+http://www.lintcode.com/zh-cn/problem/longest-increasing-subsequence/
 
 经典的动态规划问题。定义f(i)表示以nums(i)结尾的子序列的LIS长度，则有递归方程：
 **f(i) = max{ f(j) } + 1, 对所有的 j < i 且 nums(j) <= nums(i)**
@@ -435,9 +431,9 @@ public:
 };
 ```
 
-学习了<a href="http://www.jiuzhang.com/solutions/word-break/", target="_blank">这里</a>，到底还是九章的代码写得靠谱。一直TLE的重要原因是忽略了很重要的一点，即：**单词的长度是有限的**！这样在DP第二层枚举的时候，从后往前，只要枚举到最大单词长度就行了。之前一直在小细节上尝试优化，都没有切中要点，这才是主要矛盾啊！这样就把复杂度降了一个数量级，从O(N^2)降到O(N*k)，其中N是原字符串的长度，k是最长单词的长度，k可以预先求好。你见过长度超过50的英文单词吗。。所以，复杂度基本就是O(N)了啊啊！我怎么就想不到呢== 事后在leetcode上还装个逼贴了个post: <a href="https://leetcode.com/discuss/84205/actually-consider-length-would-obtain-large-optimization", target="_blank">Actually, if we consider the max length of a word, we would obtain a large optimization </a>
+学习了[这里](http://www.jiuzhang.com/solutions/word-break/)，九章的代码写得不错。一直TLE的重要原因是忽略了很重要的一点，即：**单词的长度是有限的**！这样在DP第二层枚举的时候，从后往前，只要枚举到最大单词长度就行了。之前一直在小细节上尝试优化，都没有切中要点，这才是主要矛盾啊！这样就把复杂度降了一个数量级，从O(N^2)降到O(N*k)，其中N是原字符串的长度，k是最长单词的长度，k可以预先求好。你见过长度超过50的英文单词吗。。所以，复杂度基本就是O(N)了啊啊！我怎么就想不到呢== 事后在leetcode上还贴了个[post](https://leetcode.com/discuss/84205/actually-consider-length-would-obtain-large-optimization)。
 
-收获的经验，**要多观察，多思考，不能一味地追求代码短小，哪怕长一些，逻辑清晰，复杂度低才是王道！**代码如下：
+收获的经验，要多观察，多思考，不能一味地追求代码短小，哪怕长一些，逻辑清晰，复杂度低才是王道！代码如下：
 
 ```cpp
 class Solution {
@@ -487,7 +483,7 @@ private:
 
 ## LintCode 116: Jump Game (跳跃游戏)
 
-题目链接: <a href="http://www.lintcode.com/zh-cn/problem/jump-game/", target="_blank">http://www.lintcode.com/zh-cn/problem/jump-game/ </a>
+http://www.lintcode.com/zh-cn/problem/jump-game/
 
 思路1：动态规划，复杂度是O(n^2)
 定义`f[i]`表示从数组下标为i的位置能否到达数组的最后一个位置，从后往前推，转移方程：
@@ -567,7 +563,7 @@ public:
 
 ## LintCode 117: Jump Game II (跳跃游戏II)
 
-题目链接: <a href="http://www.lintcode.com/zh-cn/problem/jump-game-ii/", target="_blank">http://www.lintcode.com/zh-cn/problem/jump-game-ii/ </a>
+http://www.lintcode.com/zh-cn/problem/jump-game-ii/
 
 这题用DP做的话，O(n^2), lintcode和leetcode都TLE。还是贪心法最好，O(n)就能解。过了一个多月再做这题，又不会了。后来用贪心写出来之后，看之前的AC代码，是用递归写的（但是这次是用循环写），两种写法的思想其实一样。
 
@@ -1043,8 +1039,7 @@ public:
 
 这个问题比较困难。几乎想了一天。
 
-思路：
-定义f(s, i, j)表示**选出来的k个数中第s个数是数组A的第i个数，且和为j的方案个数**，则有递推式：
+思路：定义f(s, i, j)表示**选出来的k个数中第s个数是数组A的第i个数，且和为j的方案个数**，则有递推式：
 
 **f(s, i, j) = f(s-1, i-1, j-A[i-1]) + f(s-1, i-2, j-A[i-1]) + ... + f(s-1, s-1, j-A[i-1])**
 
@@ -1242,5 +1237,3 @@ private:
     }
 };
 ```
-
-这题据说是leetcode上最难的题之一。

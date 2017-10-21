@@ -7,9 +7,6 @@ tags: [链表,linked list]
 summary:
 ---
 
-作者: [Takashi](http://mioopoi.github.io/about.html)
-
-
 链表数据结构定义：
 
 ```cpp

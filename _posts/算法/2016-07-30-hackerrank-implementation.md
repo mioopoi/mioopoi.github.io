@@ -7,6 +7,8 @@ tags: [hackerrank]
 summary:
 ---
 
+空闲时候做了hackerrank上的`implementation`章节，主要是一些有趣难度又不算大的实现题，调节调节心情。
+
 ## Non-Divisible Subset
 
 https://www.hackerrank.com/challenges/non-divisible-subset
@@ -31,30 +33,30 @@ public:
     int n, k;
     vector<int> a;
     vector<int> cnt;
-    
-    void load() {
+
+    void load() { 
         cin >> n >> k;
         a = vector<int>(n);
         cnt = vector<int>(100, 0);
-        for (int i = 0; i < n; ++i) {
+        for (int i = 0; i < n; ++i) { 
             scanf("%d", &a[i]);
             a[i] %= k;
-            cnt[a[i]]++;
+            cnt[a[i]]++; 
         }
     }
-    
-    int solve() {
+
+    int solve() { 
         int rst = 0;
-        if (k == 1) {
-            return 1;
+        if (k == 1) { 
+            return 1; 
         }
         if (cnt[0] > 0) rst++;
-        for (int i = 1; i < k / 2; ++i) {
-            rst += max(cnt[i], cnt[k-i]);
+        for (int i = 1; i < k / 2; ++i) { 
+            rst += max(cnt[i], cnt[k-i]); 
         }
-        if (k % 2 == 0) rst += (cnt[k/2]? 1:0);
+        if (k % 2 == 0) rst += (cnt[k/2]? 1:0); 
         else rst += max(cnt[k/2], cnt[k/2+1]);
-        return rst;
+        return rst; 
     }
 };
 
@@ -72,7 +74,7 @@ int main() {
 
 https://www.hackerrank.com/challenges/jumping-on-the-clouds
 
-贪心即可。
+贪心。
 
 ```cpp
 int main(){
@@ -222,8 +224,6 @@ int main() {
 
 https://www.hackerrank.com/challenges/jumping-on-the-clouds-revisited
 
-其实很简单的一道题，然而提交的数量居然2000都不到...
-
 有个坑就是起点可能是雷电云，这样回到起点时能量还要多减去一个2.
 
 ```cpp
@@ -352,13 +352,11 @@ int main(){
 }
 ```
 
-
-
 ## Absolute Permutation
 
 https://www.hackerrank.com/challenges/absolute-permutation
 
-居然一次AC，好开心。（这题的Submissions只有466次~）
+1Y，开心。（这题的Submissions只有466次~）
 
 其实举几个例子就能发现规律了。依次按下面的顺序判断：
 
@@ -630,7 +628,7 @@ int main() {
 
 https://www.hackerrank.com/challenges/minimum-distances
 
-开个Hash Table, 线性时间。
+开个哈希表。
 
 ```cpp
 #include <vector>
@@ -707,8 +705,6 @@ int main(){
     return 0;
 }
 ```
-
-这题居然有81671份提交~
 
 ## Fair Rations
 
@@ -797,7 +793,7 @@ int main() {
 
 https://www.hackerrank.com/challenges/almost-sorted
 
-每种情况都判断一次即可，O(n)的复杂度。
+每种情况都判断一次即可，O(n)。
 
 ```cpp
 #include <cmath>
@@ -880,7 +876,7 @@ int main() {
 
 https://www.hackerrank.com/challenges/beautiful-triplets
 
-这题较好的做法是用Hash Table存储下每个元素。然后遍历一遍数组，对每个元素`a[i]`，查找`a[i]+d`和`a[i]+d+d`是否存在，如果存在，计数加1。O(n)的时间复杂度。
+这题较好的做法是用哈希表存储下每个元素。然后遍历一遍数组，对每个元素`a[i]`，查找`a[i]+d`和`a[i]+d+d`是否存在，如果存在，计数加1。O(n)的时间复杂度。
 
 ```cpp
 #include <cmath>
@@ -1338,7 +1334,7 @@ int main(){
 
 https://www.hackerrank.com/challenges/extra-long-factorials
 
-用Java的`BigInteger`类可以很轻松地解决。
+用Java的`BigInteger`偷个懒。
 
 ```java
 import java.io.*;
@@ -1411,7 +1407,7 @@ int main(){
 
 https://www.hackerrank.com/challenges/the-time-in-words
 
-很恶心的题。
+老老实实写。
 
 ```cpp
 #include <cmath>
@@ -1538,7 +1534,7 @@ int main() {
 
 https://www.hackerrank.com/challenges/encryption
 
-模拟一下即可。先构造矩阵，再按列构造密文。须要注意的是，求出`rows = floor(sqrt(L))`和`colums = ceil(sqrt(L))`之后还应判断`rows * colums`是否小于`L`，如果是，应将`rows`加1。
+模拟。先构造矩阵，再按列构造密文。须要注意的是，求出`rows = floor(sqrt(L))`和`colums = ceil(sqrt(L))`之后还应判断`rows * colums`是否小于`L`，如果是，应将`rows`加1。
 
 ```cpp
 #include <cmath>

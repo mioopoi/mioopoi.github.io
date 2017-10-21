@@ -14,29 +14,28 @@ summary:
 
 ## 递归实现
 
-C++代码：
-
-```c++
+```cpp
 int binarySearch(vector<int>& A, int target, int left, int right) {
-	if (left <= right) {
-    	int mid = left + (right - left) / 2;
-    	if (A[mid] == target) {
-    		return mid;
-    	} else if (A[mid] < target) {
-    		binarySearch(A, target, mid+1, right);
-    	} else {
-    		binarySearch(A, target, left, mid-1);
-    	}
-	} else {
-		return -1;
-	}
+    if (left > right) {
+        return -1;
+    }
+
+    int mid = left + (right - left) / 2;
+    if (A[mid] == target) {
+        return mid;
+    } else if (A[mid] < target) {
+        return binarySearch(A, target, mid+1, right);
+    } else {
+        return binarySearch(A, target, left, mid-1);
+    }
 }
 ```
 
 ## 循环实现
+
 比起递归，循环实现虽然不太容易，但是有其必要性和好处，比如不会有堆栈溢出的问题，而且通常比递归效率高。C++代码：
 
-```c++
+```cpp
 int binarySearch(vector<int>& A, int target) {
     if (A.empty()) {
         return -1;

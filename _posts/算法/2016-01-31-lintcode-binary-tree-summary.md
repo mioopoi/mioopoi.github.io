@@ -7,10 +7,8 @@ tags: [二叉树]
 summary:
 ---
 
-作者: <a href="http://mioopoi.github.io/about.html",target="_blank">Takashi</a>
-
 ## LintCode 66: Binary Tree Preorder Traversal (二叉树的前序遍历)
-题目链接: <a href="http://www.lintcode.com/zh-cn/problem/binary-tree-preorder-traversal/", target="_blank"> http://www.lintcode.com/zh-cn/problem/binary-tree-preorder-traversal/ </a>
+题目链接: http://www.lintcode.com/zh-cn/problem/binary-tree-preorder-traversal/
 
 递归写法：
 
@@ -77,7 +75,7 @@ public:
 
 ## LintCode 67: Binary Tree Inorder Traversal (二叉树的中序遍历)
 
-题目链接: <a href="http://www.lintcode.com/zh-cn/problem/binary-tree-inorder-traversal/", target="_blank">http://www.lintcode.com/zh-cn/problem/binary-tree-inorder-traversal/</a>
+题目链接: http://www.lintcode.com/zh-cn/problem/binary-tree-inorder-traversal/
 
 递归写法：
 
@@ -137,7 +135,7 @@ public:
 
 ## LintCode 68: Binary Tree Postorder Traversal (二叉树的后序遍历)
 
-链接: <a href="http://www.lintcode.com/zh-cn/problem/binary-tree-postorder-traversal/", target="_blank"> http://www.lintcode.com/zh-cn/problem/binary-tree-postorder-traversal/ </a>
+链接: http://www.lintcode.com/zh-cn/problem/binary-tree-postorder-traversal/
 
 递归写法：
 
@@ -212,7 +210,6 @@ public:
 ```
 
 ## LintCode 97: Max Depth of Binary Tree (二叉树的最大深度)
-题目链接：<a href="http://www.lintcode.com/zh-cn/problem/maximum-depth-of-binary-tree/" target="_blank"> http://www.lintcode.com/zh-cn/problem/maximum-depth-of-binary-tree/ </a>
 
 思路:
 若根节点为空，最大深度为0；否则最大深度为1 + max(左子树的最大深度, 右子树的最大深度)。递归做就好。
@@ -234,7 +231,6 @@ public:
 ```
 
 ## LintCode 93: Balanced Binary Tree (平衡二叉树)
-题目链接: <a href="http://www.lintcode.com/zh-cn/problem/balanced-binary-tree/" target="_blank">http://www.lintcode.com/zh-cn/problem/balanced-binary-tree/</a>
 
 思路1：
 直接根据定义：左、右子树都是平衡二叉树，并且左子树和右子树的高度之差不会超过1。
@@ -343,8 +339,6 @@ private:
 
 ## LintCode 88: Lowest Common Ancestor (最近公共祖先)
 
-题目链接: <a href="http://www.lintcode.com/zh-cn/problem/lowest-common-ancestor/", target="_blank">http://www.lintcode.com/zh-cn/problem/lowest-common-ancestor/</a>
-
 思路：
 1. 如果A或B就是根节点，则根节点可能是A, B的LCA，返回根节点，否则转2；
 2. 分治：
@@ -378,8 +372,6 @@ public:
 ```
 
 ## LintCode 94: Binary Tree Maximum Path Sum (二叉树中的最大路径和)
-
-题目链接: <a href="http://www.lintcode.com/zh-cn/problem/binary-tree-maximum-path-sum/", target="_blank">http://www.lintcode.com/zh-cn/problem/binary-tree-maximum-path-sum/ </a>
 
 很好的题目，也有难度。但是理清楚了，就不难啦~
 
@@ -422,7 +414,6 @@ private:
 ```
 
 ## LintCode 69: Binary Tree Level Order Traversal (二叉树的层次遍历)
-题目链接: <a href="http://www.lintcode.com/zh-cn/problem/binary-tree-level-order-traversal/", target="_blank">http://www.lintcode.com/zh-cn/problem/binary-tree-level-order-traversal/</a>
 
 思路：
 1. 用一个队列存放二叉树每一层的节点
@@ -466,8 +457,6 @@ public:
 
 ## LintCode 70: Binary Tree Level Order Traversal II
 
-题目链接: <a href="http://www.lintcode.com/zh-cn/problem/binary-tree-level-order-traversal-ii/", target="_blank">http://www.lintcode.com/zh-cn/problem/binary-tree-level-order-traversal-ii/ </a>
-
 思路：在上一题(LintCode 69)的结果上`reverse`一下即可(函数头文件: algorithm，当然也可以自己写)。
 
 ```cpp
@@ -509,8 +498,6 @@ public:
 ```
 
 ## LintCode 71: Binary Tree Zigzag Level Order Travsersal (二叉树锯齿形层次遍历)
-
-题目链接: <a href="http://www.lintcode.com/zh-cn/problem/binary-tree-zigzag-level-order-traversal/", target="_blank">http://www.lintcode.com/zh-cn/problem/binary-tree-zigzag-level-order-traversal/ </a>
 
 思路1：二叉树层次遍历的变形，多加一个判断就好，如果是从右到左，就把该层结果`reverse`一下。
 
@@ -616,8 +603,6 @@ public:
 
 ## LintCode 95: Validate Binary Search Tree (验证二叉查找树)
 
-题目链接: <a href="http://www.lintcode.com/zh-cn/problem/validate-binary-search-tree/", target="_blank">http://www.lintcode.com/zh-cn/problem/validate-binary-search-tree/ </a>
-
 思路：
 按BST的定义来就好。
 1. 如果左子树不是BST，则返回`false`；否则DFS计算左子树的最大值，如果其大于`root->val`，返回`false`；转2；
@@ -675,31 +660,11 @@ private:
 };
 ```
 
-另外，关于这道题，这里给出了多种解法供参考：<a href="http://www.cnblogs.com/yuzhangcmu/p/4177047.html", target="_blank">http://www.cnblogs.com/yuzhangcmu/p/4177047.html </a>
+另外，关于这道题，[这里](http://www.cnblogs.com/yuzhangcmu/p/4177047.html)给出了多种解法供参考。
 
 ## LintCode 448: Inorder Successor in Binary Search Tree
 
-**问题**
-Given a binary search tree (<a href="http://www.lintcode.com/problem/validate-binary-search-tree/" title="BST">See Definition</a>) and a node in it, find the in-order successor of that node in the BST.
-
-<b>样例</b>
-<div class="m-t-sm"><p>Given tree = <code>[2,1]</code> and node = <code>1</code>:</p>
-<pre><code>  
-  2
- /
-1
-</code></pre>
-<p>return node <code>2</code>.</p>
-<p>Given tree = <code>[2,1,3]</code> and node = <code>2</code>:</p>
-<pre><code>  
-  2
- / \
-1   3
-</code></pre>
-<p>return node <code>3</code>.</p></div>
-​    
-<b>注意</b>
-<div class="m-t-sm"><p>If the given node has no in-order successor in the tree, return <code>null</code>.</p></div>
+http://www.lintcode.com/problem/validate-binary-search-tree/
 
 **思路**
 1. 用DFS找p， O(h)。DFS的同时用一个变量`lastVisited`记录可能的inorder successor，初始化为`NULL`，更新这个变量的规则是：如果往左子树DFS就更新它，否则不更新。因为如果往左子树找，中序遍历的下一个节点就是`lastVisited`；
@@ -766,8 +731,6 @@ private:
 
 ## LintCode 86: Binary Search Tree Iterator (二叉查找树迭代器)
 
-题目链接: <a href="http://www.lintcode.com/zh-cn/problem/binary-search-tree-iterator/", target="_blank"> http://www.lintcode.com/zh-cn/problem/binary-search-tree-iterator/ </a>
-
 ```c++
 /**
  * Definition of TreeNode:
@@ -824,8 +787,6 @@ public:
 
 ## LintCode 11: Search Range in Binary Search Tree (二叉查找树中搜索区间)
 
-题目链接: <a href="http://www.lintcode.com/zh-cn/problem/search-range-in-binary-search-tree/">http://www.lintcode.com/zh-cn/problem/search-range-in-binary-search-tree/ </a>
-
 思路：中序遍历加一个判断即可。中序遍历的非递归写法要烂熟于心！
 
 ```cpp
@@ -865,8 +826,6 @@ public:
 ```
 
 ## LintCode 85: Insert Node in a Binary Search Tree (在二叉查找树中插入节点)
-
-题目链接: <a href="http://www.lintcode.com/zh-cn/problem/insert-node-in-a-binary-search-tree/",target="_blank">http://www.lintcode.com/zh-cn/problem/insert-node-in-a-binary-search-tree/ </a>
 
 思路1：中序遍历（不推荐）
 1. 中序遍历，用一个变量`lastVisited`记录上一次访问的节点(初始化为`null`)
@@ -983,8 +942,6 @@ public:
 
 ## LintCode 87: Remove Node in Binary Search Tree (删除二叉查找树的节点)
 
-题目链接: <a href="http://www.lintcode.com/zh-cn/problem/remove-node-in-binary-search-tree/", target="_blank">http://www.lintcode.com/zh-cn/problem/remove-node-in-binary-search-tree/ </a>
-
 这题思路并不难想，但是实现起来不容易。
 
 思路：
@@ -1082,26 +1039,6 @@ private:
 
 ## Lintcode 376: Binary Tree Path Sum (二叉树的路径和)
 
-给定一个二叉树，找出所有路径中各节点相加总和等于给定 <code>目标值</code> 的路径。一个有效的路径，指的是从根节点到叶节点的路径。
-
-<div class="m-t-lg m-b-lg">
-  <b>样例</b>
-  <div class="m-t-sm"><p>给定一个二叉树，和 <code>目标值 = 5</code>:</p>
-<pre><code>     
-     1
-    / \
-   2   4
-  / \
- 2   3
-</code></pre>
-<p>返回：</p>
-<pre><code>
-[
-  [1, 2, 2],
-  [1, 4]
-]
-</code></pre></div>
-
 首先要理解题意。只考虑根节点到叶子节点的路径，分治法就能做。深深感觉到分治的强大~
 
 ```cpp
@@ -1141,8 +1078,6 @@ public:
 
 ## LintCode 469: Identical Binary Tree (等价二叉树)
 
-题目链接: <a href="http://www.lintcode.com/zh-cn/problem/identical-binary-tree/", target="_blank">http://www.lintcode.com/zh-cn/problem/identical-binary-tree/ </a>
-
 思路：分治。
 
 ```cpp
@@ -1172,26 +1107,6 @@ public:
 ```
 
 ## LintCode 468: Symmetric Binary Tree (对称二叉树)
-
-Given a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).
-
-<b>样例</b>
-<div class="m-t-sm"><pre><code>
-    1
-   / \
-  2   2
- / \ / \
-3  4 4  3
-</code></pre>
-<p>is a symmetric binary tree.</p>
-<pre><code>
-    1
-   / \
-  2   2
-   \   \
-   3    3
-</code></pre>
-<p>is not a symmetric binary tree.</p></div>
 
 思路1：
 把根节点的右子树（或者左子树）反转，然后判断左、右子树是否等价。
@@ -1358,8 +1273,6 @@ public:
 
 ## LintCode 155: Minimum Depth of Binary Tree (二叉树的最小深度)
 
-题目链接: <a href="http://www.lintcode.com/en/problem/minimum-depth-of-binary-tree/", target="_blank">http://www.lintcode.com/en/problem/minimum-depth-of-binary-tree/ </a>
-
 首先要弄清“最小深度”以及“叶子节点”的概念。这题不难，但是容易错。
 
 ```cpp
@@ -1385,8 +1298,6 @@ public:
 ```
 
 ## LintCode 73: Construct Binary Tree from Preorder and Inorder Traversal (前序遍历和中序遍历构造二叉树)
-
-题目链接: <a href="http://www.lintcode.com/zh-cn/problem/construct-binary-tree-from-preorder-and-inorder-traversal/", target="_blank"> http://www.lintcode.com/zh-cn/problem/construct-binary-tree-from-preorder-and-inorder-traversal/ </a>
 
 很好的题。递归，分别构造左子树和右子树，然后合并。通过前序遍历和中序遍历的结果可以计算出左子树的节点个数，据此可以知道左子树的前序遍历和中序遍历；右子树同理。
 
@@ -1467,8 +1378,6 @@ private:
 ```
 
 ## LintCode 7: Binary Tree Serialization (二叉树的序列化和解序列)
-
-题目链接: <a href="http://www.lintcode.com/zh-cn/problem/binary-tree-serialization/", target="_blank"> http://www.lintcode.com/zh-cn/problem/binary-tree-serialization/ </a>
 
 这题调试了好久。主要是对`string`的操作很不熟悉，代码也写得不简洁。
 
