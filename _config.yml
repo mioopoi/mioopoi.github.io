@@ -53,7 +53,7 @@ analytics:
 # Outputting
 permalink: /:categories/:title
 paginate_path: /page:num
-paginate: 30
+paginate: 100
 timezone: Asia/Shanghai
 
 # Handling Reading
