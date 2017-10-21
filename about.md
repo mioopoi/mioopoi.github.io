@@ -13,9 +13,13 @@ comments: true
 90后。本科毕业于[电子科技大学](http://www.uestc.edu.cn/)通信学院，目前在东南大学攻读计算机科学硕士学位。
 
 - **关注领域** 算法设计、运筹优化、机器学习、计算机网络
-- **兴趣爱好** 乒乓球、动画、单机游戏，以及喵和汪
-- **近期最大的目标** 秋招求职顺利
-- **最近状态** 忙碌
+- **兴趣爱好** 乒乓球、动画、单机游戏，以及和可爱的小动物玩耍
+- **近期最大的目标** 完成一个仿真项目
+- **最近状态** 放松
+
+### News!
+
+- 我的秋招顺利结束了，决定签约网易啦，职位是机器学习算法工程师 (开心
 
 ### 关于这个Blog
 使用**[Jekyll](https://jekyllrb.com/)** + **[Bootstrap-3](http://v3.bootcss.com/)**搭建，用**[Markdown](http://sspai.com/25137)**写作，托管在[GitHub](https://github.com/mioopoi/mioopoi.github.io)上，主题来自[SenZhangAI](https://github.com/SenZhangAI/senzhangai.github.com)前辈。
