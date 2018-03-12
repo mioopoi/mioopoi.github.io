@@ -1,5 +1,6 @@
-yout: post
-title: "2017年看过的动画、玩过的游戏"
+---
+layout: post
+title: "2017年看过的动画与玩过的游戏"
 description: ""
 category: "随笔"
 tags: [生活,总结]
