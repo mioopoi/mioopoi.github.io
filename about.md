@@ -7,22 +7,22 @@ comments: true
 
 ### 关于我
 
-90后。2015年本科毕业于[电子科技大学](http://www.uestc.edu.cn/)，2018年获得[东南大学](http://www.seu.edu.cn/)计算机科学硕士学位。刚入职网易。
+90后。2015年本科毕业于[电子科技大学](http://www.uestc.edu.cn/)，2018年获得[东南大学](http://www.seu.edu.cn/)计算机科学硕士学位。
 
-- **关注领域** `数据技术（Spark/Hive/Java/Scala）`, `算法设计`, `机器学习`, `运筹优化`
-- **兴趣爱好** `乒乓球`, `动画`, `单机游戏`
+- **关注领域** 数据科学, 算法设计, 机器学习, 运筹优化
+- **兴趣爱好** 乒乓球, 动画, 单机游戏
 - **短期目标** 适应新环境，上手工作
 - **最近状态** 正在努力适应新环境的职场小白
 
 ### News!
 
-- `2018.7.2` 我入职网易了，正式从学生转变为职场人，是考拉数据技术组的一名数据挖掘工程师🆙
-- `2018.6.12` 学位论文答辩顺利，被授予「工学硕士」学位。学园生活即将结束了 (一丝伤感❤️
-- 我的秋招顺利结束了，决定签约网易啦😊
-- 我的第一篇学术论文*Optimal Rate Schedules with Data Sharing in Energy Harvesting Communication Systems*被录用了 (科研菜鸟小心愿达成:smile:
+- `2018.07.02` 我入职网易了，是一名数据挖掘工程师🆙
+- `2018.06.12` 学位论文答辩顺利，被授予「工学硕士」学位。学园生活即将结束了 (一丝伤感❤️
+- `2018.11.01` 我的秋招顺利结束了，决定签约网易啦😊
+- `2017.12.20` 我的第一篇学术论文*Optimal Rate Schedules with Data Sharing in Energy Harvesting Communication Systems*被录用了 (科研菜鸟小心愿达成😀
 
 ### 关于这个Blog
-使用**[Jekyll](https://jekyllrb.com/)** + **[Bootstrap-3](http://v3.bootcss.com/)**搭建，用**[Markdown](http://sspai.com/25137)**写作，托管在[GitHub](https://github.com/mioopoi/mioopoi.github.io)上，主题来自[SenZhangAI](https://github.com/SenZhangAI/senzhangai.github.com)前辈。
+使用**[Jekyll](https://jekyllrb.com/)** + **[Bootstrap-3](http://v3.bootcss.com/)**搭建，用**[Markdown](http://sspai.com/25137)**写作，托管在[GitHub](https://github.com/mioopoi/mioopoi.github.io)上，主题来自[SenZhangAI](https://github.com/SenZhangAI/senzhangai.github.com)。
 
 搭建这个网站没有什么特别的原因，初衷大概是觉得有个属于自己的Blog会很**酷**，完全就是自己的空间，想写什么就写什么，可以在这里贴上许多有趣的内容，功能不够了还可以自己开发，正所谓自己动手丰衣足食。更重要的是，有时一些零碎的想法几句话说不完，就想汇成文章，或发表观点、或总结知识、或记录生活，以起到记录和重塑思维的作用。
 
@@ -35,7 +35,7 @@ Anyway，如果这里的东西对你有或多或少的启发，我会很开心�
 Email：{{ site.author.email }}
 {% endif %}
 
-WeChat: `lhf199308` (备注：Blog)
+WeChat: `lhf199308` (备注信息: `ihuafan.com`)
 
 {% if site.author.weibo %}
 Weibo：<http://weibo.com/{{ site.author.weibo }}>
