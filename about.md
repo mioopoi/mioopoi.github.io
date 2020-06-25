@@ -9,18 +9,16 @@ comments: true
 
 90后。2015年本科毕业于[电子科技大学](http://www.uestc.edu.cn/)，随后推免至[东南大学](http://www.seu.edu.cn/)直硕，2018年获得东南大学计算机科学硕士学位。
 
-- **关注领域** 数据技术, 数据挖掘, 机器学习, 推荐系统, 运筹优化
-- **兴趣爱好** 乒乓球, 音乐, 动画, CSGO
-- **短期目标** 深入理解Hadoop, Spark, Flink等数据技术组件
-- **长期目标** (不好意思写出来喵
-- **最近阅读** 《大学之路》（吴军 著）
+- **关注领域** 数据技术, 数据挖掘, 机器学习, 推荐系统, 计算广告, 运筹优化
+- **业余爱好** 乒乓球, CSGO,  动画, 音乐
 
 ### News!
 
+- `2020.06.20` 我们搭建的广告检索系统上线了!
 - `2018.07.02` 我入职网易了，是一名数据挖掘工程师🆙
 - `2018.06.12` 学位论文答辩顺利，被授予「工学硕士」学位。学园生活即将结束了 (一丝伤感❤️
-- `2018.11.01` 我的秋招顺利结束了，决定签约网易啦😊
 - `2017.12.20` 我的第一篇学术论文*Optimal Rate Schedules with Data Sharing in Energy Harvesting Communication Systems*被录用了 (科研菜鸟小心愿达成😀
+- `2017.11.01` 我的秋招顺利结束了，决定签约网易啦😊
 
 ### 关于这个Blog
 使用**[Jekyll](https://jekyllrb.com/)** + **[Bootstrap-3](http://v3.bootcss.com/)**搭建，用**[Markdown](http://sspai.com/25137)**写作，托管在[GitHub](https://github.com/mioopoi/mioopoi.github.io)上，主题来自[SenZhangAI](https://github.com/SenZhangAI/senzhangai.github.com)。
