@@ -21,7 +21,14 @@ comments: true
 - `2017.11.01` 我的秋招顺利结束了，决定签约网易啦😊
 
 ### 关于这个Blog
-使用**[Jekyll](https://jekyllrb.com/)** + **[Bootstrap-3](http://v3.bootcss.com/)**搭建，用**[Markdown](http://sspai.com/25137)**写作，托管在[GitHub](https://github.com/mioopoi/mioopoi.github.io)上，主题来自[SenZhangAI](https://github.com/SenZhangAI/senzhangai.github.com)。
+基于 **[Jekyll](https://jekyllrb.com/)** 静态网站生成器构建，采用现代化的 **[Bootstrap 5](https://getbootstrap.com/)** 前端框架，使用 **[Markdown](http://sspai.com/25137)** 写作，托管在 [GitHub Pages](https://pages.github.com/) 上，主题基于 [SenZhangAI](https://github.com/SenZhangAI/senzhangai.github.com) 定制开发。
+
+该博客从 2026 年开始进行全面的现代化升级，引入了更多现代化功能：
+- 🔍 本地搜索功能
+- 🌙 暗色/亮色主题切换
+- 💬 基于 GitHub Issues 的现代化评论系统
+- 📱 优化的移动端体验
+- ⚡ 改进的阅读体验和性能优化
 
 搭建这个网站没有什么特别的原因，初衷大概是觉得有个属于自己的Blog会很**酷**，完全就是自己的空间，想写什么就写什么，可以在这里贴上许多有趣的内容，功能不够了还可以自己开发，正所谓自己动手丰衣足食。更重要的是，有时一些零碎的想法几句话说不完，就想汇成文章，或发表观点、或总结知识、或记录生活，以起到记录和重塑思维的作用。
 

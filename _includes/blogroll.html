@@ -1,9 +1,9 @@
 {% if site.data.blogroll %}
-<section>
+<section class="mb-4">
 <h4>Blogroll</h4>
-<ul>
+<ul class="list-unstyled">
   {% for list in site.data.blogroll %}
-  <li><a href="{{ list.url }}" title="{{ list.title }}">{{ list.title }}</a></li>
+  <li class="mb-1"><a href="{{ list.url }}" title="{{ list.title }}" class="text-decoration-none">{{ list.title }}</a></li>
   {% endfor %}
 </ul>
 </section>

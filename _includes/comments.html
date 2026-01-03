@@ -1,12 +1,26 @@
-{% if site.comments.duoshuo.name %}
-  <div id="comments">
+{% if site.comments.gitalk.clientID %}
+  <div id="gitalk-container" class="mt-4"></div>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '{{ site.comments.gitalk.clientID }}',
+      clientSecret: '{{ site.comments.gitalk.clientSecret }}',
+      repo: '{{ site.comments.gitalk.repo }}',
+      owner: '{{ site.comments.gitalk.owner }}',
+      admin: ['{{ site.comments.gitalk.admin | join: "', '" }}'],
+      id: location.pathname,
+      distractionFreeMode: {{ site.comments.gitalk.distractionFreeMode | default: false }}
+    });
+    gitalk.render('gitalk-container');
+  </script>
+{% elsif site.comments.duoshuo.name %}
+  <div id="comments" class="mt-4">
     <div class="ds-thread" {% if page.id %}data-thread-key="{{ page.id }}"{% endif %}  data-title="{% if page.title %}{{ page.title }}{% endif %}"></div>
   </div>
-{% else %}
-  {% if site.comments.disqus.name %}
-    <div id="comments">
+{% elsif site.comments.disqus.name %}
+  <div id="comments" class="mt-4">
 		<div id="disqus_thread"></div>
-    </div>
-  {% endif %}
+  </div>
 {% endif %}
 

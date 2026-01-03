@@ -2,12 +2,12 @@
 layout: default
 ---
 
-<div class="col-md-12">
+<div class="col-12 post-page">
   <article class="news-item">
-    <h1  class="news-item"> {{ page.title }}</h1>
-    <div class="post-date">
-      <a href="https://github.com/{{ site.author.github }}/{{ site.author.github }}.github.com/edit/master/{{ page.path }}" target="_blank">纠错</a>&nbsp;&nbsp;
-      <span class="glyphicon glyphicon-time"></span>
+    <h1  class="news-item mb-3"> {{ page.title }}</h1>
+    <div class="post-date mb-3">
+      <a href="https://github.com/{{ site.author.github }}/{{ site.author.github }}.github.io/edit/master/{{ page.path }}" target="_blank" class="text-decoration-none">纠错</a>&nbsp;&nbsp;
+      <span class="fa fa-clock-o"></span>
       {{ page.date | date_to_string }}
     </div>
       {% include toc.html %}
@@ -20,34 +20,36 @@ layout: default
       {% include support.html %}
     </div>
 
-    <p class="meta">
+    <p class="meta mt-3">
       {% unless page.category == empty %}
         Categories:
         {% for cat in page.category %}
-          <a class="tags tags-default tags-xs" href="{{ BASE_PATH }}/categories.html#{{ cat|downcase}}">{{ cat |downcase}}</a>
+          <a class="badge bg-secondary text-decoration-none" href="{{ BASE_PATH }}/categories.html#{{ cat|downcase}}">{{ cat |downcase}}</a>
         {% endfor %}
       {% endunless %}
 
       {% unless page.tags == empty %}
         Tags:
         {% for tag in page.tags %}
-          <a class="tags tags-default tags-xs" href="{{ BASE_PATH }}/tags.html#{{ tag }}">{{ tag }}</a>
+          <a class="badge bg-secondary text-decoration-none" href="{{ BASE_PATH }}/tags.html#{{ tag }}">{{ tag }}</a>
         {% endfor %}
       {% endunless %}
     </p>
   </article>
 
-  <ul class="pager">
-    {% if page.previous %}
-      <li class="previous"><a class="btn btn-xs" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Prev</a></li>
-    {% else %}
-      <li class="previous disabled"><a class="btn btn-xs" href="#">&larr; Prev</a></li>
-    {% endif %}
-    {% if page.next %}
-      <li class="next"><a class="btn btn-xs" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
-    {% else %}
-      <li class="next disabled"><a class="btn btn-xs" href="#">Next &rarr;</a></li>
-    {% endif %}
-  </ul>
+  <nav aria-label="Post navigation" class="mt-4">
+    <ul class="pagination justify-content-between">
+      {% if page.previous %}
+        <li class="page-item"><a class="page-link btn btn-sm" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Prev</a></li>
+      {% else %}
+        <li class="page-item disabled"><a class="page-link btn btn-sm" href="#" tabindex="-1" aria-disabled="true">&larr; Prev</a></li>
+      {% endif %}
+      {% if page.next %}
+        <li class="page-item"><a class="page-link btn btn-sm" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
+      {% else %}
+        <li class="page-item disabled"><a class="page-link btn btn-sm" href="#" tabindex="-1" aria-disabled="true">Next &rarr;</a></li>
+      {% endif %}
+    </ul>
+  </nav>
   {% include comments.html %}
 </div>

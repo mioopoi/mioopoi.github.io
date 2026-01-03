@@ -1,5 +1,5 @@
 # Site settings
-title : 临在的求索者
+title : 弱菜的自我修养
 head_title : 华繁的博客
 description:
 tagline: 专注当下
@@ -20,27 +20,29 @@ donate_url:
 
 # Comment
 comments:
-  duoshuo:
-    name:
-    rcomments:
-        num: 8
-        avatar: 0
-        time: 0
-        title: 0
-        admin: 1
-        length: 20
+  # 多说评论系统已停止服务，已替换为 Gitalk
+  # 基于 GitHub Issues 的现代化评论系统
+  gitalk:
+    clientID: "Ov23lirVZ1tFTUkf7WLv"
+    clientSecret: "96e7ffb3de4f2ed6174c99d0029e31bbd1a89167"
+    repo: "mioopoi.github.io"
+    owner: "mioopoi"
+    admin: ["mioopoi"]
+    distractionFreeMode: false
+    
   disqus:
     # In my architecture, duoshuo has higher priority then disqus,
     # because duoshuo is quicker then disqus in China.
     # if not only use in China, disqus is better.
     # disqus.name will be actived if duoshuo's name is null(Just delete it).
-    name: mioopoi
+    # 已停止使用 Disqus，转向 Gitalk
+    name: 
     rcomments:
         # Number of comments to show
         num: 8
         # Hide moderators' comments (1 for hidden, 0 for disabled)
         hide_mods: 0
-        # Hide display images (1 for hidden, 0 for shown)
+        # Hide display images (1 for hidden, 0 to shown)
         hide_avatars: 1
         # Avatar size in pixels (32 by default)
         avatar_size: 32
@@ -52,7 +54,7 @@ analytics:
 
 # Outputting
 permalink: /:categories/:title
-paginate_path: /page:num
+paginate_path: /page:num/
 paginate: 100
 timezone: Asia/Shanghai
 
@@ -72,12 +74,13 @@ future:      true
 unpublished: false
 
 # Plugins
+plugins: [jekyll-paginate, jekyll-feed, jekyll-seo-tag, jekyll-sitemap, jekyll-remote-theme]
 whitelist: []
 gems:      []
 
 # Conversion
-markdown:    redcarpet  # Update time 2016-02-20, formal is redcarpet
-highlighter: rouge   # Update time 2016-02-20, formal is pygments
+markdown:    kramdown  # 升级到 kramdown - GitHub Pages 推荐，支持 MathJax
+highlighter: rouge   # 保持 rouge 代码高亮
 lsi:         false
 excerpt_separator: "\n\n"
 
@@ -85,16 +88,11 @@ excerpt_separator: "\n\n"
 relative_permalinks: false
 
 # Markdown Processors
-redcarpet:
-  extensions: [ "fenced_code_blocks",
-                "hard_wrap",
-                "autolink",
-                "tables",
-                "strikethrough",
-     # DON'T USE"superscript", never use this with Mathjax,this will cause bug
-                "with_toc_data",
-                "highlight",
-                "footnotes",
-                "quote",
-                "prettify",
-                "no_intra_emphasis"]
+kramdown:
+  auto_ids: true
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge

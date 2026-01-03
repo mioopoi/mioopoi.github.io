@@ -1,12 +1,31 @@
-<footer class="footer text-center">
-  <p>&copy; 2015-{{ site.time | date: '%Y' }} <a href="/" target="_blank" title="{{ site.description }}">{{ site.author.name }}CC BY-NC-SA 3.0. <a href="https://github.com/javachen/javachen-blog-theme" target="_blank" title="https://github.com/javjavachen-blog-theme">Theme</a> build with <a href="//jekyllrb.com/" target="_blank" title="Transform your plain text into swebsites and blogs.">Jekyll</a>.
-  {% include analytics.html %}
-  </p>
-  <div id="toTop" style="display: block;">  <a href="#">▲</a><a href="#footer">▼</a>  </div>
+<footer class="footer text-center py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <p class="copyright-text mb-1">
+          &copy; 2015-{{ site.time | date: '%Y' }} <a href="/" target="_blank" title="{{ site.description }}">{{ site.author.name }}</a> 
+          <span class="mx-1">·</span> 
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener noreferrer">CC BY-NC-SA 4.0</a>
+        </p>
+        <p class="theme-info mb-0 text-muted">
+          <a href="https://github.com/javachen/javachen-blog-theme" target="_blank" title="https://github.com/javachen/javachen-blog-theme" rel="noopener noreferrer">Theme</a> built with 
+          <a href="https://jekyllrb.com/" target="_blank" title="Transform your plain text into websites and blogs" rel="noopener noreferrer">Jekyll</a>
+        </p>
+        {% include analytics.html %}
+      </div>
+    </div>
+    <div id="toTop" class="mt-3">
+      <a href="#" class="mx-1" title="回到顶部">▲</a>
+      <a href="#footer" class="mx-1" title="到底部">▼</a>
+    </div>
+  </div>
 </footer>
 
-<script type="text/javascript" src="{{ ASSET_PATH }}/assets/js/jquery-2.1.3.min.js"></script>
-<script type="text/javascript" src="{{ ASSET_PATH }}/assets/js/bootstrap.min.js"></script>
+<!-- jQuery -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+
+<!-- Bootstrap 5 JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 <script type="text/javascript" src="{{ ASSET_PATH }}/assets/js/core.js"></script>
 
 <script type="text/javascript" src="{{ ASSET_PATH }}/assets/js/toc.js"></script>
@@ -15,7 +34,12 @@
 
 <script type="text/javascript">
 $(document).ready(function() {
-    $('#toc').toc({ listType: 'ul', showSpeed: 0, showEffect: 'slideDown' });
+    $('#toc').toc({ 
+        listType: 'ul', 
+        showSpeed: 0, 
+        showEffect: 'slideDown',
+        minimumHeaders: 1 // 降低所需标题数量，确保目录显示
+    });
 });
 </script>
 

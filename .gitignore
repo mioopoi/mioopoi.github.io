@@ -1,0 +1,81 @@
+# Jekyll generated files
+_site
+.jekyll-cache
+.jekyll-metadata
+
+# Ruby dependencies
+/.bundle
+/vendor/bundle
+Gemfile.lock
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea
+.vscode
+*.swp
+*.swo
+*~
+
+# Log files
+*.log
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Build outputs
+/build
+/dist
+
+# Testing
+/coverage
+
+# Temporary files
+*.tmp
+*.temp
+
+# Backup files
+*.bak
+*.old
+
+# Compressed files
+*.zip
+*.tar.gz
+*.rar
+
+# Node.js dependencies (if any)
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python dependencies (if any)
+*.pyc
+__pycache__
+.pytest_cache
+
+# Docker files (if any)
+Dockerfile
+.dockerignore
+
+# CI/CD files (if any)
+.gitlab-ci.yml
+.travis.yml
+.github/workflows/
+
+# SEO tools (if any)
+.sitemap.xml.gz
+.htaccess
+
+# Local development files
+*.local
+.dev
+
+# SSL certificates (if any)
+*.pem
+*.key
+*.crt

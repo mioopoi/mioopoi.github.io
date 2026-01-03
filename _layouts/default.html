@@ -3,15 +3,15 @@
 
 {% include head.html %}
 
-  <body>
+  <body class="{% if page.url == '/' %}homepage{% endif %}">
     <div class="container">
     {% include header.html %}
 
       <div class="wrapper">
+        <div id="search-loader" style="display:none;text-align:center">
+          <img src="/static/images/loading.gif">
+        </div>
         <div class="row">
-          <div id="search-loader" style="display:none;text-align:center">
-            <img src="/static/images/loading.gif">
-          </div>
           {{ content }}
         </div>
       </div>
