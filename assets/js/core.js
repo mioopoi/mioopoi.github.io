@@ -120,34 +120,158 @@
   $(document).ready(function() {
     // Get the theme toggle button and icon
     const themeToggle = document.getElementById('theme-toggle');
-    const themeIcon = themeToggle.querySelector('i');
-    
+    const themeIcon = themeToggle.querySelector('svg use');
+
     // Check for saved theme preference or use system preference
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     let currentTheme = savedTheme || (prefersDark ? 'dark' : 'light');
-    
+
     // Apply initial theme
     function applyTheme(theme) {
       if (theme === 'dark') {
         document.documentElement.classList.add('dark-theme');
-        themeIcon.className = 'fa fa-sun-o';
+        themeIcon.setAttribute('xlink:href', '#icon-sun');
       } else {
         document.documentElement.classList.remove('dark-theme');
-        themeIcon.className = 'fa fa-moon-o';
+        themeIcon.setAttribute('xlink:href', '#icon-moon');
       }
       localStorage.setItem('theme', theme);
       currentTheme = theme;
     }
-    
+
     // Initial theme application
     applyTheme(currentTheme);
-    
+
     // Add click event listener for theme toggle
     themeToggle.addEventListener('click', () => {
       const newTheme = currentTheme === 'light' ? 'dark' : 'light';
       applyTheme(newTheme);
     });
   });
-  
+
+  /* TOC 当前位置高亮 */
+  $(document).ready(function() {
+    if ($('#toc').length && $('article h2, article h3, article h4').length) {
+      const headings = $('article h2, article h3, article h4');
+      const tocLinks = $('#toc a');
+
+      $(window).scroll(function() {
+        let current = '';
+        headings.each(function() {
+          const top = $(this).offset().top;
+          if ($(window).scrollTop() >= top - 100) {
+            current = $(this).attr('id');
+          }
+        });
+
+        tocLinks.removeClass('active');
+        if (current) {
+          tocLinks.filter('[href="#' + current + '"]').addClass('active');
+        }
+      });
+    }
+  });
+
+  /* 隐藏空的 TOC 侧边栏 */
+  $(document).ready(function() {
+    const $sidebar = $('.post-sidebar');
+    if ($sidebar.length) {
+      const hasHeadings = $('article h2, article h3, article h4').length > 0;
+      if (!hasHeadings) {
+        $sidebar.addClass('toc-empty');
+      }
+    }
+  });
+
   })(jQuery);
+
+  /* 代码块功能增强 */
+  $(document).ready(function() {
+    $('pre').each(function() {
+      const $pre = $(this);
+      const $code = $pre.find('code');
+
+      // 获取语言 - 支持多种类名格式
+      let language = 'text';
+      const codeClass = $code.attr('class') || '';
+      const preClass = $pre.attr('class') || '';
+      const combinedClass = codeClass + ' ' + preClass;
+
+      // 尝试匹配各种语言类名格式
+      const patterns = [
+        /language-(\w+)/,
+        /highlight-(\w+)/,
+        /lang-(\w+)/,
+        /(\w+)-code/
+      ];
+
+      for (const pattern of patterns) {
+        const match = combinedClass.match(pattern);
+        if (match) {
+          language = match[1];
+          break;
+        }
+      }
+
+      // 如果还是没找到，尝试从 Pygments 的 highlight 类中推断
+      if (language === 'text' && combinedClass.includes('highlight')) {
+        // Pygments 通常会有 highlight 类，但语言信息可能在父元素或其他地方
+        // 这里我们可以设置一个默认值
+        language = 'code';
+      }
+
+      // 创建包装器
+      const $wrapper = $('<div class="code-block"></div>');
+      const $header = $('<div class="code-header"></div>');
+      const $lang = $('<span class="code-lang"></span>').text(language);
+      const $actions = $('<div class="code-actions"></div>');
+
+      // 复制按钮
+      const $copy = $('<button class="code-copy" title="复制代码"><svg class="icon"><use xlink:href="#icon-copy"></use></svg></button>');
+
+      // 折叠按钮
+      const $collapse = $('<button class="code-collapse" title="折叠/展开"><svg class="icon"><use xlink:href="#icon-chevron-up"></use></svg></button>');
+
+      $actions.append($copy, $collapse);
+      $header.append($lang, $actions);
+      $pre.wrap($wrapper);
+      $pre.before($header);
+
+      // 复制功能
+      $copy.click(function() {
+        const code = $code.text();
+        navigator.clipboard.writeText(code).then(() => {
+          $copy.addClass('copied');
+          $copy.attr('title', '已复制!');
+          setTimeout(() => {
+            $copy.removeClass('copied');
+            $copy.attr('title', '复制代码');
+          }, 2000);
+        }).catch(err => {
+          console.error('复制失败:', err);
+        });
+      });
+
+      // 折叠功能
+      $collapse.click(function() {
+        $pre.toggleClass('collapsed');
+        $collapse.toggleClass('collapsed');
+        const isCollapsed = $pre.hasClass('collapsed');
+        $collapse.attr('title', isCollapsed ? '展开' : '折叠');
+      });
+    });
+  });
+
+  /* 使整个文章卡片可点击 */
+  $(document).ready(function() {
+    $('.homepage .article-item').click(function(e) {
+      // 如果点击的不是链接本身，则跳转到文章
+      if (!$(e.target).is('a') && !$(e.target).closest('a').length) {
+        const link = $(this).find('.article-title a').attr('href');
+        if (link) {
+          window.location.href = link;
+        }
+      }
+    });
+  });
